@@ -414,16 +414,16 @@ tbody.collapse.in { display: table-row-group; }
 .purple-color .link-donate, .purple-color .link-save-form, .purple-color .header-top, .purple-color .progress-line, .purple-color .form-group-checkbox, .purple-color .nav-tabs-dobro > li:first-child:before { background-color: #662D91; }
 .purple-color .e-money-donated, .purple-color .event-date, .purple-color .full-link, .purple-color .helper-donated, .purple-color .event-address .icon-angle-right:before, .purple-color .e-contact-phone, .purple-color .e-contact-mail, .purple-color .link-plus { color: #662D91; }
 
-.purple-color .news-wrapper { background: #9a59cb; }
+.purple-color .news-wrapper { background: #c9a6e4; }
 
 .purple-color .link-donate:hover, .purple-color .link-save-form:hover { background: #4b216a; }
 
 .orange-color .link-donate, .orange-color .link-save-form, .orange-color .header-top, .orange-color .progress-line, .orange-color .form-group-checkbox, .orange-color .nav-tabs-dobro > li:first-child:before { background-color: #F15C3E; }
 .orange-color .e-money-donated, .orange-color .event-date, .orange-color .full-link, .orange-color .helper-donated, .orange-color .event-address .icon-angle-right:before, .orange-color .e-contact-phone, .orange-color .e-contact-mail, .orange-color .link-plus { color: #F15C3E; }
 
-.purple-color .news-wrapper { background: #f8ac9d; }
+.orange-color .news-wrapper { background: #fbd4cd; }
 
-.purple-color .link-donate:hover, .purple-color .link-save-form:hover { background: #eb3611; }
+.orange-color .link-donate:hover, .orange-color .link-save-form:hover { background: #eb3611; }
 
 /*! Swipebox v1.3.0 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
 html.swipebox-html.swipebox-touch { overflow: hidden !important; }
@@ -567,7 +567,7 @@ html.swipebox-html.swipebox-touch { overflow: hidden !important; }
 
 @media (min-width: 768px) { .event-history { width: 51%; float: left; } }
 .file-upload { position: relative; display: block; width: 70px; height: 70px; overflow: hidden; margin: 0 auto 20px auto; background: url("../i/sprite-svg.svg") no-repeat; background-size: 200px 200px; background-position: -100px -2px; }
-.file-upload input[type="file"] { position: absolute; top: 0; left: 0; bottom: 0; right: 0; cursor: pointer; outline: 0; -webkit-transform: scale(10); -ms-transform: scale(10); -o-transform: scale(10); transform: scale(10); opacity: 0; filter: alpha(opacity=0); }
+.file-upload input[type="file"] { position: absolute; top: 0; left: 0; bottom: 0; right: 0; cursor: pointer; outline: 0; -webkit-transform: scale(3); -ms-transform: scale(3); -o-transform: scale(3); transform: scale(3); opacity: 0; filter: alpha(opacity=0); }
 
 .file-upload-sub { display: block; text-align: center; }
 
@@ -611,6 +611,20 @@ textarea.form-control { resize: none; padding: 10px; height: 105px; }
 
 .form-address-title, .form-contact-title { margin: 0 0 10px 0; font: 500 20px/20px "Roboto", sans-serif; color: #1a1a1a; }
 
+.form-photo { padding: 0 0 15px 0; }
+
+.form-video { padding: 0 0 20px 0; }
+.form-video .form-group { padding: 5px 0 0 0; }
+
+.form-photo-title, .form-video-title { font: 500 16px/18px "Roboto", sans-serif; color: #1a1a1a; }
+
+.form-video-title { margin: 10px 0 0 0; }
+
+.form-photo-list { margin: 0 0 0 -1%; padding: 0; font-size: 0; list-style-type: none; }
+.form-photo-list > li { position: relative; display: inline-block; padding: 20px 0 0 0; width: 32.33333%; height: 90px; margin: 0 0 5px 1%; border: 2px solid #f2f2f2; }
+.form-photo-list > li .file-upload { width: 40px; height: 40px; background-position: -114px -17px; }
+
+@media (min-width: 768px) { .form-photo-list > li { width: 24%; } }
 /*  Owl Carousel - Animate Plugin */
 .owl-carousel .animated { -webkit-animation-duration: 1000ms; animation-duration: 1000ms; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
 
