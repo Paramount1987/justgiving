@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link href="style/screen.css" rel="stylesheet" media="all">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+
+<body class="purple-color">
+    <div class="wrapper">
+  
+      <header>
+        <div class="container-fluid header-top">
+
+          <div class="row">
+            <div class="col-xs-6">
+              ЛОГО
+            </div>
+            <div class="col-xs-6">
+              <div class="pull-right">
+                <a href="#" class="i-search"></a>
+                <img src="i/avatar-mini.jpg" alt="" class="top-avatar-mini">
+                <div class="menu-button">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div><!-- end row -->
+          
+        </div>
+      </header>
+
+      <div class="middle">
+        <div class="container-fluid ">
+          <div class="project-info-top">
+            <p class="project-name">Для «Подари жизнь»</p>
+            <h1 class="h1-title">Создайте страницу сбора средств</h1>
+            <p>Акция «День добра»</p>
+          </div>  
+          <div class="project-image-upload">
+            <label class="file-upload">    
+                <input type="file">
+            </label>
+            <span class="file-upload-sub">Загрузите изображение</span>
+          </div>
+          <div class="slider-default">
+            <h4 class="slider-title">Выберите цвет интерфейса</h4>
+            <div class="slider-default-inner">
+              <div class="color-carousel">
+                <div class="color" id="orange">color</div>
+                <div class="color" id="burly">color</div>
+                <div class="color" id="lawngreen">color</div>
+                <div class="color" id="lightseagreen">color</div>
+                <div class="color" id="mediumorchid">color</div>
+                <div class="color" id="mediumseagreen">color</div>
+                <div class="color" id="blue">color</div>
+                <div class="color" id="chocolate">color</div>
+                <div class="color" id="crimson">color</div>
+                <div class="color" id="green">color</div>
+                <div class="color" id="lightblue">color</div>
+                <div class="color active" id="purple">color</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-default">
+            <div class="form-group">
+              <label for="title-page" class="label-strict">Заголовок вашей страницы</label><i class="max-length">160</i>
+              <input type="text" class="form-control form-control-strict" id="title-page" maxlength="160">
+            </div>
+            <div class="form-group">
+              <label for="desc-page" class="label-strict">Краткое описание</label><i class="max-length">500</i>
+              <textarea class="form-control form-control-strict"  id="desc-page" maxlength="500">Мы поднимаем £ 9000 , чтобы помочь людям с ограниченными возможностями в Гане, потому что они это заслужили!</textarea>
+            </div>
+            <div class="form-group">
+              <label for="money-page" class="label-strict">Сколько вы хотите собрать</label>
+              <input type="number" class="form-control form-control-strict" id="money-page">
+            </div>
+            <div class="form-group">
+              <label for="deadline-page" class="label-strict">Дата окончания сбора средств</label>
+              <input type="date" class="form-control form-control-strict" id="deadline-page">
+            </div>
+            <div class="form-group">
+              <label for="url-page" class="label-strict">Выберите адрес страницы</label>
+              <input type="text" class="form-control form-control-strict" id="url-page" value="mimogem.ru/mikahail-zaytsev">
+            </div>
+            <div class="form-group">
+              <label for="history-page">Ваша история</label>
+              <textarea class="form-control"  id="history-page">Мы поднимаем £ 9000 , чтобы помочь людям с ограниченными возможностями в Гане, потому что они это заслужили!</textarea>
+            </div>
+            <div class="form-group">
+              <label for="city-page" class="label-strict">Город</label>
+              <input type="text" class="form-control form-control-strict" id="city-page">
+            </div>
+            <div class="form-group">
+              <label for="date-page" class="label-strict">Когда</label>
+              <input type="date" class="form-control form-control-strict" id="date-page">
+            </div>
+            <div class="form-group">
+              <label for="time-page" class="label-strict">Время</label>
+              <input type="time" class="form-control form-control-strict" id="time-page">
+            </div>
+            <div class="form-group-checkbox">
+                <div class="checkbox">
+                  <input type="checkbox" id="trigger-event">check<label for="trigger-event"></label>
+                </div>
+                <h4 class="checkbox-title">Закрытое мероприятие</h4>
+                <p class="checkbox-text">Пользователи не увидят адрес и контакты.</p>
+            </div>
+            <div class="form-address">
+              <h4 class="form-address-title">Адрес</h4>
+              <div class="form-address-item">
+                <div class="form-group">
+                 <label for="street-1" class="label-strict">Улица</label>
+                 <input type="text" class="form-control form-control-strict" id="street-1">
+                </div>
+                <div class="form-group-wrap">
+                    <div class="form-group form-group-inline pull-left">
+                     <label for="house-1" class="label-strict">Дом</label>
+                     <input type="text" class="form-control form-control-strict" id="house-1">
+                    </div>
+                    <div class="form-group form-group-inline pull-right">
+                     <label for="flat-1">Квартира</label>
+                     <input type="text" class="form-control" id="flat-1">
+                    </div>
+                </div>  
+                <div class="form-group">
+                 <label for="comment-1">Хотите что-то добавить?</label>
+                 <input type="text" class="form-control" id="comment-1">
+                </div>
+              </div>
+              <a href="#" id="address-plus" class="link-plus">Добавить адрес</a>
+            </div>
+            <div class="form-contact">
+              <h4 class="form-contact-title">Контакты</h4>
+              <div class="form-contact-item">
+                <div class="form-group">
+                 <label for="phone-1">Телефон</label>
+                 <input type="tel" class="form-control" id="phone-1">
+                </div>
+                <div class="form-group">
+                 <label for="email-1">Электронная почта</label>
+                 <input type="email" class="form-control" id="email-1">
+                </div>
+              </div>
+              <a href="#" id="contact-plus" class="link-plus">Добавить контакт</a>
+            </div>
+          </div>
+
+
+        </div> <!-- end container -->
+      </div><!-- end middle -->
+
+   
+    </div><!-- end wrapper -->
+
+    <footer id="footer">
+      <a href="#" class="link-save-form">Сохранить и продолжить</a>
+    </footer><!-- end footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+    <script src="http://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
+    <script src="js/build.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

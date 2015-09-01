@@ -15,6 +15,27 @@ $(document).ready(function(){
 	$( ".swipebox" ).swipebox();
 	/////////////////////////////
 
+//slider
+
+$('.color-carousel').owlCarousel({
+    center: true,
+    items:5,
+    loop:true,
+    margin:45,
+    responsive:{
+        480:{
+            items:7
+        },
+        768:{
+          items:9
+        }
+    }
+});
+////////
+
+
+
+
 	////////////////////////////////map
           var myMap;
 
