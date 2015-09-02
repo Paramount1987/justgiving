@@ -14,7 +14,7 @@
 
   </head>
 
-<body class="purple-color">
+<body class="project-page purple-color">
     <div class="wrapper">
   
       <header>
@@ -47,11 +47,12 @@
             <h1 class="h1-title">Создайте страницу сбора средств</h1>
             <p>Акция «День добра»</p>
           </div>  
-          <div class="project-image-upload">
+          <div class="project-image-upload load-img">
             <label class="file-upload">    
                 <input type="file">
             </label>
             <span class="file-upload-sub">Загрузите изображение</span>
+            <img src="i/l-photo.jpg" class="uploaded-img" alt="">
           </div>
           <div class="slider-default">
             <h4 class="slider-title">Выберите цвет интерфейса</h4>
@@ -72,28 +73,34 @@
               </div>
             </div>
           </div>
-          <div class="form-default">
+          <form id="form-page" class="form-default">
             <div class="form-group">
               <label for="title-page" class="label-strict">Заголовок вашей страницы</label><i class="max-length">160</i>
-              <input type="text" class="form-control form-control-strict" id="title-page" maxlength="160">
+              <input type="text" class="form-control form-control-strict" id="title-page" maxlength="160" name="titlePage">
             </div>
             <div class="form-group">
               <label for="desc-page" class="label-strict">Краткое описание</label><i class="max-length">500</i>
-              <textarea class="form-control form-control-strict"  id="desc-page" maxlength="500">Мы поднимаем £ 9000 , чтобы помочь людям с ограниченными возможностями в Гане, потому что они это заслужили!</textarea>
+              <textarea class="form-control form-control-strict"  id="desc-page" maxlength="500" name="descPage"></textarea>
             </div>
             <div class="single-line"></div>
             <div class="form-group">
-              <label for="money-page" class="label-strict">Сколько вы хотите собрать</label>
-              <input type="number" class="form-control form-control-strict" id="money-page">
+              <label for="money-page" class="label-strict">Сколько вы хотите собрать?</label>
+              <div class="input-wrap">
+                <input type="text" class="form-control form-control-strict" id="money-page" name="moneyPage">
+                <span class="input-mask-rouble">руб.</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="deadline-page" class="label-strict">Дата окончания сбора средств</label>
-              <input type="date" class="form-control form-control-strict" id="deadline-page">
+              <div class="input-wrap">
+                <input type="text" class="form-control form-control-strict" id="deadline-page" name="deadlinePage">
+                <span class="input-mask-calendar icon-calendar"></span>
+              </div>  
             </div>
             <div class="single-line"></div>
             <div class="form-group">
               <label for="url-page" class="label-strict">Выберите адрес страницы</label>
-              <input type="text" class="form-control form-control-strict" id="url-page" value="mimogem.ru/mikahail-zaytsev">
+              <input type="text" class="form-control form-control-strict" id="url-page"  name="urlPage">
             </div>
             <div class="form-group">
               <label for="history-page">Ваша история</label>
@@ -102,15 +109,18 @@
             <div class="single-line"></div>
             <div class="form-group">
               <label for="city-page" class="label-strict">Город</label>
-              <input type="text" class="form-control form-control-strict" id="city-page">
+              <input type="text" class="form-control form-control-strict" id="city-page" name="cityPage">
             </div>
             <div class="form-group">
               <label for="date-page" class="label-strict">Когда</label>
-              <input type="date" class="form-control form-control-strict" id="date-page">
+              <div class="input-wrap">
+                <input type="text" class="form-control form-control-strict" id="date-page" name="datePage">
+                <span class="input-mask-calendar icon-calendar"></span>
+              </div>  
             </div>
             <div class="form-group">
               <label for="time-page" class="label-strict">Время</label>
-              <input type="time" class="form-control form-control-strict" id="time-page">
+              <input type="text" class="form-control form-control-strict" id="time-page" name="timePage">
             </div>
             <div class="form-group-checkbox">
                 <div class="checkbox">
@@ -121,49 +131,55 @@
             </div>
             <div class="form-address">
               <h4 class="form-address-title">Адрес</h4>
-              <div class="form-address-item">
-                <div class="form-group">
-                 <label for="street-1" class="label-strict">Улица</label>
-                 <input type="text" class="form-control form-control-strict" id="street-1">
-                </div>
-                <div class="form-group-wrap">
-                    <div class="form-group form-group-inline pull-left">
-                     <label for="house-1" class="label-strict">Дом</label>
-                     <input type="text" class="form-control form-control-strict" id="house-1">
+                <div class="form-address-inner">
+                  <div class="form-address-item">
+                    <div class="form-group">
+                     <label for="street-1" class="label-strict">Улица</label>
+                     <input type="text" class="form-control form-control-strict" id="street-1" name="streetPage" required>
                     </div>
-                    <div class="form-group form-group-inline pull-right">
-                     <label for="flat-1">Квартира</label>
-                     <input type="text" class="form-control" id="flat-1">
+                    <div class="form-group-wrap">
+                        <div class="form-group form-group-inline pull-left">
+                         <label for="house-1" class="label-strict">Дом</label>
+                         <input type="text" class="form-control form-control-strict" id="house-1" name="housePage" required>
+                        </div>
+                        <div class="form-group form-group-inline pull-right">
+                         <label for="flat-1">Квартира</label>
+                         <input type="text" class="form-control" id="flat-1">
+                        </div>
+                    </div>  
+                    <div class="form-group">
+                     <label for="comment-1">Хотите что-то добавить?</label>
+                     <input type="text" class="form-control" id="comment-1">
                     </div>
+                  </div>
+
                 </div>  
-                <div class="form-group">
-                 <label for="comment-1">Хотите что-то добавить?</label>
-                 <input type="text" class="form-control" id="comment-1">
-                </div>
-              </div>
               <a href="#" id="address-plus" class="link-plus">Добавить адрес</a>
             </div>
             <div class="form-contact">
               <h4 class="form-contact-title">Контакты</h4>
-              <div class="form-contact-item">
-                <div class="form-group">
-                 <label for="phone-1">Телефон</label>
-                 <input type="tel" class="form-control" id="phone-1">
+              <div class="form-contact-inner">  
+                <div class="form-contact-item">
+                  <div class="form-group">
+                   <label for="phone-1">Телефон</label>
+                   <input type="tel" class="form-control" id="phone-1">
+                  </div>
+                  <div class="form-group">
+                   <label for="email-1">Электронная почта</label>
+                   <input type="email" class="form-control" id="email-1">
+                  </div>
                 </div>
-                <div class="form-group">
-                 <label for="email-1">Электронная почта</label>
-                 <input type="email" class="form-control" id="email-1">
-                </div>
-              </div>
+              </div>  
               <a href="#" id="contact-plus" class="link-plus">Добавить контакт</a>
             </div>
             <div class="form-photo">
               <h4 class="form-photo-title">Добавьте фотографии</h4>
               <ul class="form-photo-list">
-                <li>
+                <li class="load-img">
                   <label class="file-upload">    
-                      <input type="file">
+                    <input type="file">
                   </label>
+                  <img src="i/m-photo.jpg" class="uploaded-img" alt="">
                 </li>
                 <li>
                   <label class="file-upload">    
@@ -180,11 +196,13 @@
             <div class="form-video">
               <h4 class="form-video-title">Ссылка на видео YouTube, Vimeo</h4>
                 <div class="form-group">
-                 <input type="text" class="form-control" id="url-1" value="http://youtube.com/video">
+                  <div class="video-item"><input type="text" class="form-control" id="url-1" value="http://youtube.com/video"><span class="close">х</span></div>
                 </div>
+
                 <a href="#" id="video-plus" class="link-plus">Добавить ссылку</a>
             </div>
-          </div>
+            <button  class="link-save-form" type="submit" form="form-page">Сохранить и продолжить</button>
+          </form>
 
 
         </div> <!-- end container -->
@@ -192,11 +210,6 @@
 
    
     </div><!-- end wrapper -->
-
-    <footer id="footer">
-      <a href="#" class="link-save-form">Сохранить и продолжить</a>
-    </footer><!-- end footer -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
     <script src="http://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
     <script src="js/build.min.js"></script>
