@@ -53,7 +53,7 @@ $("#trigger-event").change(function(){
 	  if($(target).hasClass("open")){
 	  	$(this).text("Скрыть");
 	  }else{
-	  	$(this).text("Подробнее о моей истории");
+	  	$(this).text("Подробнее");
 	  }
 
 	})
@@ -127,6 +127,84 @@ $("#deadline-page").mask("99.99.9999",{placeholder:"дд/мм/год "});
 $("#date-page").mask("99.99.9999",{placeholder:"дд/мм/год "});
 $("#time-page").mask("99:99",{placeholder:"__:__ "});
 
+/////////////////////////////////////////get width to replace grid
+
+
+function replaceDonate(){
+  var wrap = $(".event-money-wrap");
+  if(viewportSize.getWidth() < 768){
+  $(".event-money-wrap").remove();
+  $(".event-address-wrap").before(wrap);
+  }else{
+    $(".event-money-wrap").remove();
+    $(".event-extra-info").prepend(wrap);
+  }
+}
+
+replaceDonate();
+
+$(window).resize(function(){
+  replaceDonate();
+});
+
+/////////////////////////////////////menu-button
+$(".menu-button").click(function(){
+
+  if($(".search-wrap").css("display") == "block"){
+    
+  }else {
+    if(!$(".modal-backdrop-menu").length){
+      $(".wrapper").append("<div class='modal-backdrop-menu modal-backdrop fade in'></div>");
+    }else{
+      $(".modal-backdrop-menu").remove();
+      }
+  }
+
+  $(".search-wrap").slideUp();
+  $(".menu-wrap").slideToggle();
+
+
+});
+
+$(".menu-wrap").on("click",".icon-menu",function(){
+  $(".menu-wrap").slideToggle();
+
+  if(!$(".modal-backdrop-menu").length){
+      $(".wrapper").append("<div class='modal-backdrop-menu modal-backdrop fade in'></div>");
+  }else{
+    $(".modal-backdrop-menu").remove();
+  }
+});
+////////////////////////////////////search-btn
+$(".search-btn,.search-btn-text").click(function(){
+
+  if($(".menu-wrap").css("display") == "block"){
+   
+  }else {
+    if(!$(".modal-backdrop-menu").length){
+      $(".wrapper").append("<div class='modal-backdrop-menu modal-backdrop fade in'></div>");
+    }else{
+      $(".modal-backdrop-menu").remove();
+      }
+  }
+
+  $(".menu-wrap").slideUp();
+  $(".search-wrap").slideToggle();
+
+});
+
+/////////////////////////////////.$(".modal-backdrop-menu")
+$(".wrapper").on("click",".modal-backdrop-menu",function(){
+  $(".menu-wrap").slideUp();
+  $(".search-wrap").slideUp();
+  $(".modal-backdrop-menu").remove();
+});
+
+////////////////////////////////////help hide
+$(".helps-wrap").on("click",".link-hide",function(e){
+  e.preventDefault();
+  $(this).closest("li").slideUp();
+});
 	////////////////////////////////map
           var myMap;
 

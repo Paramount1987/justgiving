@@ -21,27 +21,70 @@
         <div class="container-fluid header-top">
 
           <div class="row">
-            <div class="col-xs-6">
-              ЛОГО
+            <div class="col-sm-4 col-md-4 col-xs-6">
+              <a href="#" class="link-logo"><img src="i/logo.svg" alt=""></a>
             </div>
-            <div class="col-xs-6">
-              <div class="pull-right">
-                <a href="#" class="i-search"></a>
-                <img src="i/avatar-mini.jpg" alt="" class="top-avatar-mini">
+            <div class="col-sm-3 col-md-4 hidden-xs">
+              <a href="#" class="link-money-start">Начать сбор средств</a>
+            </div>
+            <div class="col-xs-6 col-sm-5 col-md-4">
+              <div class="pull-right header-right-block">
+                <a href="#" class="i-search search-btn"></a><span class="search-btn-text hidden-xs">Поиск</span>
+                <a href="#" class="user-status"><img src="i/avatar-mini.jpg" alt="" class="top-avatar-mini"></span><span class="user-top-name hidden-xs">Константин Константинопольский</span></a>
                 <div class="menu-button">
                   <span></span>
                   <span></span>
                   <span></span>
+                  <i class="menu-text hidden-xs">Меню</i>
                 </div>
               </div>
             </div>
           </div><!-- end row -->
+          <div class="menu-wrap">
+            <ul class="menu-list">
+              <li><a href="#" class="link-menu">Начать сбор стредств</a></li>
+              <li><a href="#" class="link-menu">Кампании рядом</a></li>
+              <li><a href="#" class="link-menu">Помощь</a></li>
+              <li><a href="#" class="link-menu">О нас</a></li>
+            </ul>
+            <span class="icon-menu icon-angle-right"></span>
+          </div>  
+          <div class="search-wrap">
+            <div class="search-top">
+              <div class="search-top-inner">
+                <form class="form-search">
+                  <input type="text" class="search-input" placeholder="поиск">
+                </form>
+              </div>
+            </div>
+            <div class="search-body">
+              <div class="search-body-inner">
+                <h4 class="search-body-title">Результаты поиска</h4>
+                <p class="search-body-desc">Всего нашлось 102 результата</p>
+                <ul class="search-found">
+                  <li>
+                    <p class="search-found-date">20.09.2015</p>
+                    <p class="search-found-text">
+                      Cancer Research UK собирает деньги,чтобы построить новый исследовательский центр в самом сердце Лондона, который поможет нам победить рак раньше
+                    </p>
+                  </li>
+                  <li>
+                    <p class="search-found-date">20.09.2015</p>
+                    <p class="search-found-text">
+                      Cancer Research UK собирает деньги,чтобы построить
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
           
         </div>
+
       </header>
 
       <div class="middle">
-        <div class="container-fluid ">
+        <div class="container-fluid content">
           <div class="project-info-top">
             <p class="project-name">Для «Подари жизнь»</p>
             <h1 class="h1-title">Создайте страницу сбора средств</h1>
@@ -210,6 +253,7 @@
 
    
     </div><!-- end wrapper -->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
     <script src="http://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
     <script src="js/build.min.js"></script>
