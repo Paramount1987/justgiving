@@ -127,6 +127,10 @@ $("#deadline-page").mask("99.99.9999",{placeholder:"дд/мм/год "});
 $("#date-page").mask("99.99.9999",{placeholder:"дд/мм/год "});
 $("#time-page").mask("99:99",{placeholder:"__:__ "});
 
+///////////////.avatar-img-wrap
+var widthImg = $(".avatar-img-wrap").width();
+
+$(".avatar-img-wrap").height(widthImg/1.7);
 /////////////////////////////////////////get width to replace grid
 
 
@@ -145,7 +149,11 @@ replaceDonate();
 
 $(window).resize(function(){
   replaceDonate();
+  widthImg = $(".avatar-img-wrap").width();
+
+  $(".avatar-img-wrap").height(widthImg/1.7);
 });
+
 
 /////////////////////////////////////menu-button
 $(".menu-button").click(function(){
@@ -154,9 +162,11 @@ $(".menu-button").click(function(){
     
   }else {
     if(!$(".modal-backdrop-menu").length){
-      $(".wrapper").append("<div class='modal-backdrop-menu modal-backdrop fade in'></div>");
+      $(".wrapper").append("<div class='modal-backdrop-menu modal-backdrop fade'></div>");
+      setTimeout('$(".modal-backdrop-menu").addClass("in")',150);
     }else{
-      $(".modal-backdrop-menu").remove();
+      $(".modal-backdrop-menu").removeClass("in");
+      setTimeout('$(".modal-backdrop-menu").remove();',150);
       }
   }
 
@@ -170,9 +180,11 @@ $(".menu-wrap").on("click",".icon-menu",function(){
   $(".menu-wrap").slideToggle();
 
   if(!$(".modal-backdrop-menu").length){
-      $(".wrapper").append("<div class='modal-backdrop-menu modal-backdrop fade in'></div>");
+      $(".wrapper").append("<div class='modal-backdrop-menu modal-backdrop fade'></div>");
+      setTimeout('$(".modal-backdrop-menu").addClass("in")',150);
   }else{
-    $(".modal-backdrop-menu").remove();
+    $(".modal-backdrop-menu").removeClass("in");
+      setTimeout('$(".modal-backdrop-menu").remove();',150);
   }
 });
 ////////////////////////////////////search-btn
@@ -182,9 +194,11 @@ $(".search-btn,.search-btn-text").click(function(){
    
   }else {
     if(!$(".modal-backdrop-menu").length){
-      $(".wrapper").append("<div class='modal-backdrop-menu modal-backdrop fade in'></div>");
+      $(".wrapper").append("<div class='modal-backdrop-menu modal-backdrop fade'></div>");
+      setTimeout('$(".modal-backdrop-menu").addClass("in")',150);
     }else{
-      $(".modal-backdrop-menu").remove();
+      $(".modal-backdrop-menu").removeClass("in");
+      setTimeout('$(".modal-backdrop-menu").remove();',150);
       }
   }
 
@@ -197,7 +211,8 @@ $(".search-btn,.search-btn-text").click(function(){
 $(".wrapper").on("click",".modal-backdrop-menu",function(){
   $(".menu-wrap").slideUp();
   $(".search-wrap").slideUp();
-  $(".modal-backdrop-menu").remove();
+  $(".modal-backdrop-menu").removeClass("in");
+  setTimeout('$(".modal-backdrop-menu").remove();',150);
 });
 
 ////////////////////////////////////help hide

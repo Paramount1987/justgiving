@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no">
+    <title>Авторизация</title>
+    <link href="style/screen.css" rel="stylesheet" media="all">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+
+<body class="body-short-footer blue-color">
+    <div class="wrapper">
+  
+      <header>
+        <div class="container-fluid header-top">
+
+          <div class="row">
+            <div class="col-sm-4 col-md-4 col-xs-6">
+              <a href="#" class="link-logo"><img src="i/logo.svg" alt=""></a>
+            </div>
+            <div class="col-sm-4 col-md-4 hidden-xs">
+              <a href="#" class="link-money-start">Начать сбор средств</a>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4 h-right-block">
+              <div class="pull-right header-right-block">
+                <a href="#" class="i-search search-btn"></a><span class="search-btn-text hidden-xs">Поиск</span>
+                <a href="#" class="user-status"><span class="icon-key"></span></a>
+                <div class="menu-button">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <i class="menu-text hidden-xs">Меню</i>
+                </div>
+              </div>
+            </div>
+          </div><!-- end row -->
+          <div class="menu-wrap">
+            <ul class="menu-list">
+              <li><a href="#" class="link-menu">Начать сбор стредств</a></li>
+              <li><a href="#" class="link-menu">Кампании рядом</a></li>
+              <li><a href="#" class="link-menu">Помощь</a></li>
+              <li><a href="#" class="link-menu">О нас</a></li>
+            </ul>
+            <span class="icon-menu icon-angle-right"></span>
+          </div>  
+          <div class="search-wrap">
+            <div class="search-top">
+              <div class="search-top-inner">
+                <form class="form-search">
+                  <input type="text" class="search-input" placeholder="поиск">
+                </form>
+              </div>
+            </div>
+            <div class="search-body">
+              <div class="search-body-inner">
+                <h4 class="search-body-title">Результаты поиска</h4>
+                <p class="search-body-desc">Всего нашлось 102 результата</p>
+                <ul class="search-found">
+                  <li>
+                    <p class="search-found-date">20.09.2015</p>
+                    <p class="search-found-text">
+                      Cancer Research UK собирает деньги,чтобы построить новый исследовательский центр в самом сердце Лондона, который поможет нам победить рак раньше
+                    </p>
+                  </li>
+                  <li>
+                    <p class="search-found-date">20.09.2015</p>
+                    <p class="search-found-text">
+                      Cancer Research UK собирает деньги,чтобы построить
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+      </header>
+
+      <div class="middle">
+        <div class="container-fluid content">
+          <div class="authorization-wrap">
+            <h4 class="author-title">Авторизуйтесь</h4>
+            <p class="author-desc">С помощью аккаунта в соц.сетях</p>
+            <div class="widget-registr">
+            <script src="http://ulogin.ru/js/ulogin.js"></script>
+            <div id="uLogin" data-ulogin="display=panel;fields=first_name,last_name;providers=odnoklassniki,vkontakte,mailru,facebook,twitter;hidden=other;redirect_uri=http%3A%2F%2F"></div>
+            </div>
+            <p class="author-desc">или через электронную почту</p>
+          </div>  
+
+          <form class="form-default">
+            <div class="form-group">
+              <label for="email">Адрес электронной почты</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="password">Пароль</label><a href="#" class="link-password">Забыли пароль?</a>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <button  class="link-save-form btn-round" type="submit">Авторизоваться</button>
+            <div class="form-footer-body">
+              <h4 class="form-footer-title">Впервые на сайте?</h4>
+              <a href="#" class="form-footer-link">Зарегистрироваться<br/> через эл.почту</a>
+            </div>
+          </form>
+
+
+        </div> <!-- end container -->
+      </div><!-- end middle -->
+
+   
+    </div><!-- end wrapper -->
+    <footer id="footer" class="short-footer">
+      <div class="container-fluid">
+        <div class="row footer-bottom">
+          <ul class="list-inline menu-footer-bottom">
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+            <li><a href="#">Обратная связь</a></li>
+            <li><a href="#">Пользовательское соглашение</a></li>
+          </ul>
+          <span class="copyright-bottom">©Подари жизнь</span>
+        </div>
+      </div>
+    </footer><!-- end footer -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+    <script src="http://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
+    <script src="js/build.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
