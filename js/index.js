@@ -48,7 +48,6 @@ $("#trigger-event").change(function(){
 });
 //////////////////////////////////trigger history
 	$(".full-link").click(function(){
-    $(this).prev(".short-outer").slideToggle();
 	  var target = 	$(this).prev(".short-outer").toggleClass("open");
 	  if($(target).hasClass("open")){
 	  	$(this).text("Скрыть");
@@ -130,7 +129,7 @@ $("#time-page").mask("99:99",{placeholder:"__:__ "});
 ///////////////.avatar-img-wrap
 var widthImg = $(".avatar-img-wrap").width();
 
-$(".avatar-img-wrap").height(widthImg/1.7);
+$(".avatar-img-wrap").height(widthImg/1.8);
 /////////////////////////////////////////get width to replace grid
 
 
@@ -156,7 +155,7 @@ $(window).resize(function(){
   replaceDonate();
   widthImg = $(".avatar-img-wrap").width();
 
-  $(".avatar-img-wrap").height(widthImg/1.7);
+  $(".avatar-img-wrap").height(widthImg/1.8);
 });
 
 
@@ -212,6 +211,8 @@ $(".search-btn,.search-btn-text").click(function(){
 
 });
 
+
+$(".search-btn-text").hover(function(){ $(".i-search ").addClass("focus"); },function(){ $(".i-search ").removeClass("focus"); });
 /////////////////////////////////.$(".modal-backdrop-menu")
 $(".wrapper").on("click",".modal-backdrop-menu",function(){
   $(".menu-wrap").slideUp();
@@ -225,6 +226,24 @@ $(".helps-wrap").on("click",".link-hide",function(e){
   e.preventDefault();
   $(this).closest("li").slideUp();
 });
+
+///////////////////////////////////parallax for avatar img
+window.onscroll = function(){
+
+var top = $(document).scrollTop();
+
+
+  $(".avatar-img-wrap img").css({
+      "-webkit-transform":"translate(0," + top/6 +"px)",
+      "-ms-transform":"translate(0," + top/6 +"px)",
+      "transform":"translate(0," + top/6 +"px)"
+    });
+
+  console.log(top);
+}
+
+
+/////////////////////////////////
 	////////////////////////////////map
           var myMap;
 
