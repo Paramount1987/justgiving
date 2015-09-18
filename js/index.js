@@ -48,7 +48,7 @@ $("#trigger-event").change(function(){
 });
 //////////////////////////////////trigger history
 	$(".full-link").click(function(){
-
+    $(this).prev(".short-outer").slideToggle();
 	  var target = 	$(this).prev(".short-outer").toggleClass("open");
 	  if($(target).hasClass("open")){
 	  	$(this).text("Скрыть");
@@ -136,12 +136,17 @@ $(".avatar-img-wrap").height(widthImg/1.7);
 
 function replaceDonate(){
   var wrap = $(".event-money-wrap");
+  var eventInfo = $(".event-info-top");
   if(viewportSize.getWidth() < 768){
   $(".event-money-wrap").remove();
-  $(".event-address-wrap").before(wrap);
+  $(".event-info-top").remove();
+  $(".spot-mobile-money").before(wrap);
+  $(".col-left-campaing").prepend(eventInfo);
   }else{
     $(".event-money-wrap").remove();
+    $(".event-info-top").remove();
     $(".event-extra-info").prepend(wrap);
+    $(".gradient-bg").prepend(eventInfo);
   }
 }
 
