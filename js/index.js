@@ -130,6 +130,15 @@ $("#time-page").mask("99:99",{placeholder:"__:__ "});
 var widthImg = $(".avatar-img-wrap").width();
 
 $(".avatar-img-wrap").height(widthImg/1.8);
+
+//////////////////////////////////////////////campany-user-title
+$(".campany-user-title").hover(function(){
+  var color = $("header").css("background-color");
+  $(this).css("color",color);
+},function(){
+  $(this).css("color","#1a1a1a");
+});
+
 /////////////////////////////////////////get width to replace grid
 
 
