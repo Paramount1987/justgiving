@@ -82,10 +82,17 @@
         </div>
 
       </header>
-      <div class="profile-author">
+      <div class="profile-author profile-author-edit">
         <div class="profile-author-inner">
-          <img src="i/author-b.jpg" alt="" class="profile-author-img">
-          <h4 class="profile-author-name">Зайцев Михаил</h4>
+          <div class="profile-author-img-wrap loaded">  
+            <img src="i/author-b.jpg" alt="" class="profile-author-img">
+            <span class="btn-close">х</span>
+          </div>  
+          <label class="file-upload">  
+            Загрузить фото  
+            <input type="file">
+          </label>
+          <p class="profile-author-desc">Файл не должен быть меньше чем 200х200 пикселей и превышать 3 mb</p>
         </div>
       </div>
       <div class="middle">
@@ -132,6 +139,13 @@
                 </div>
                 <h4 class="checkbox-title">Невидимый профиль</h4>
                 <p class="checkbox-text">Вашу страничку и действия не увидят другие пользователи</p>
+            </div>
+            <div class="form-group">
+              <a href="#" class="change-password">Изменить пароль</a>
+            </div>
+            <div class="profile-social">
+              <h4 class="profile-social-title">Социальные сети</h4>
+              <p class="profile-social-desc">Нажмите на иконку социальной сети, чтобы связать ее с вашим аккаунтом</p>
             </div>
           </div>
 
