@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no">
+    <title>Profile User</title>
+    <link href="style/screen.css" rel="stylesheet" media="all">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+
+<body class="blue-color">
+    <div class="wrapper">
+  
+      <header>
+        <div class="container-fluid header-top">
+
+          <div class="row">
+            <div class="col-sm-4 col-md-4 col-xs-6">
+              <a href="#" class="link-logo link-logo-h"><img src="i/logo-podari.png" alt=""></a>
+            </div>
+            <div class="col-sm-4 col-md-4 hidden-xs">
+              <a href="#" class="link-money-start">Собери деньги для детей</a>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4 h-right-block">
+              <div class="pull-right header-right-block">
+                <a href="#" class="i-search search-btn"></a><span class="search-btn-text hidden-xs">Поиск</span>
+                <a href="registr.html" class="user-status"><span class="icon-key"></span></a>
+                <div class="menu-button">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <i class="menu-text hidden-xs">Меню</i>
+                </div>
+              </div>
+            </div>
+          </div><!-- end row -->
+          <div class="menu-wrap">
+            <ul class="menu-list">
+              <li><a href="#" class="link-menu">Начать сбор стредств</a></li>
+              <li><a href="#" class="link-menu">Кампании рядом</a></li>
+              <li><a href="#" class="link-menu">Помощь</a></li>
+              <li><a href="#" class="link-menu">О нас</a></li>
+            </ul>
+            <span class="icon-menu icon-angle-right"></span>
+          </div>  
+          <div class="search-wrap">
+            <div class="search-top">
+              <div class="search-top-inner">
+                <form class="form-search">
+                  <input type="text" class="search-input" placeholder="поиск">
+                </form>
+              </div>
+            </div>
+            <div class="search-body">
+              <div class="search-body-inner">
+                <h4 class="search-body-title">Результаты поиска</h4>
+                <p class="search-body-desc">Всего нашлось 102 результата</p>
+                <ul class="search-found">
+                  <li>
+                    <p class="search-found-date">20.09.2015</p>
+                    <p class="search-found-text">
+                      Cancer Research UK собирает деньги,чтобы построить новый исследовательский центр в самом сердце Лондона, который поможет нам победить рак раньше
+                    </p>
+                  </li>
+                  <li>
+                    <p class="search-found-date">20.09.2015</p>
+                    <p class="search-found-text">
+                      Cancer Research UK собирает деньги,чтобы построить
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+      </header>
+      <div class="profile-author">
+        <div class="profile-author-inner">
+          <img src="i/author-b.jpg" alt="" class="profile-author-img">
+          <h4 class="profile-author-name">Зайцев Михаил</h4>
+        </div>
+      </div>
+      <div class="middle">
+
+        <div class="container-fluid content"> 
+          <form class="form-default form-profile">
+
+          <div class="form-left">
+            <div class="form-group">
+              <label for="name">Имя</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+              <label for="birthday">Дата рождения</label>
+              <input type="text" class="form-control" id="birthday" placeholder="28.05.1985">
+            </div>
+            <div class="form-group">
+              <label for="email">Электронная почта</label>
+              <input type="email" class="form-control" id="email" placeholder="mail@mail.com">
+            </div>
+            <div class="form-group form-group-check">
+                <div class="checkbox">
+                  <input type="checkbox" id="subscribe">check<label for="subscribe"></label>
+                </div>
+                <h4 class="checkbox-title">Подписаться на рассылку</h4>
+            </div>
+            <div class="form-group">
+              <label for="desc-profile">Расскажите о себе</label><i class="max-length">200</i>
+              <textarea class="form-control" id="desc-profile" maxlength="200" name="descProfile"></textarea>
+            </div>
+          </div>
+          <div class="form-right">
+            <div class="form-group">
+              <label for="phone">Телефон</label>
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="+7 892 357-23-57">
+            </div>
+            <div class="form-group">
+              <label for="city">Город</label>
+              <input type="text" class="form-control" id="city" name="city" placeholder="Казань">
+            </div>
+            <div class="form-group form-group-check">
+                <div class="checkbox">
+                  <input type="checkbox" id="subscribe">check<label for="subscribe"></label>
+                </div>
+                <h4 class="checkbox-title">Невидимый профиль</h4>
+                <p class="checkbox-text">Вашу страничку и действия не увидят другие пользователи</p>
+            </div>
+          </div>
+
+
+
+            <button  class="link-save-form btn-round" type="submit" >Сохранить</button>
+          </form>
+
+
+        </div> <!-- end container -->
+      </div><!-- end middle -->
+
+   
+    </div><!-- end wrapper -->
+
+    <footer id="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <ul class="footer-menu">
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Для сборщиков денег</a></li>
+              <li><a href="#">Партнерство</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" class="link-logo"><img src="i/logo-red.svg" alt=""></a>
+          </div>
+          <div class="col-sm-4 list-social-wrap">
+            <ul class="list-inline list-social">
+              <li><a href="#" class="icon-twitter-bird"></a></li>
+              <li><a href="#" class="icon-vkontakte"></a></li>
+              <li><a href="#" class="icon-facebook"></a></li>
+              <li><a href="#" class="icon-instagram"></a></li>
+              <li><a href="#" class="icon-odnoklassniki"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row footer-bottom">
+          <ul class="list-inline menu-footer-bottom">
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+            <li><a href="#">Обратная связь</a></li>
+            <li><a href="#">Пользовательское соглашение</a></li>
+          </ul>
+          <span class="copyright-bottom">©Подари жизнь</span>
+        </div>
+      </div>
+    </footer><!-- end footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+    <script src="http://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
+    <script src="js/build.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
