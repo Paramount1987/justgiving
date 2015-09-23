@@ -86,9 +86,9 @@
         <div class="profile-author-inner">
           <div class="profile-author-img-wrap loaded">  
             <img src="i/author-b.jpg" alt="" class="profile-author-img">
-            <span class="btn-close">х</span>
+            <span class="btn-close"></span>
           </div>  
-          <label class="file-upload">  
+          <label class="file-upload photo-upload">  
             Загрузить фото  
             <input type="file">
           </label>
@@ -99,66 +99,64 @@
 
         <div class="container-fluid content"> 
           <form class="form-default form-profile">
-
-          <div class="form-left">
-            <div class="form-group">
-              <label for="name">Имя</label>
-              <input type="text" class="form-control" id="name">
-            </div>
-            <div class="form-group">
-              <label for="birthday">Дата рождения</label>
-              <input type="text" class="form-control" id="birthday" placeholder="28.05.1985">
-            </div>
-            <div class="form-group">
-              <label for="email">Электронная почта</label>
-              <input type="email" class="form-control" id="email" placeholder="mail@mail.com">
-            </div>
-            <div class="form-group form-group-check">
-                <div class="checkbox">
-                  <input type="checkbox" id="subscribe">check<label for="subscribe"></label>
+            <div class="form-inner">  
+              <div class="form-left">
+                <div class="form-group">
+                  <label for="name">Имя</label>
+                  <input type="text" class="form-control" id="name">
                 </div>
-                <h4 class="checkbox-title">Подписаться на рассылку</h4>
-            </div>
-            <div class="form-group">
-              <label for="desc-profile">Расскажите о себе</label><i class="max-length">200</i>
-              <textarea class="form-control" id="desc-profile" maxlength="200" name="descProfile"></textarea>
-            </div>
-          </div>
-          <div class="form-right">
-            <div class="form-group">
-              <label for="phone">Телефон</label>
-              <input type="tel" class="form-control" id="phone" name="phone" placeholder="+7 892 357-23-57">
-            </div>
-            <div class="form-group">
-              <label for="city">Город</label>
-              <input type="text" class="form-control" id="city" name="city" placeholder="Казань">
-            </div>
-            <div class="form-group form-group-check">
-                <div class="checkbox">
-                  <input type="checkbox" id="subscribe">check<label for="subscribe"></label>
+                <div class="form-group">
+                  <label for="birthday">Дата рождения</label>
+                  <input type="text" class="form-control" id="birthday" placeholder="28.05.1985">
                 </div>
-                <h4 class="checkbox-title">Невидимый профиль</h4>
-                <p class="checkbox-text">Вашу страничку и действия не увидят другие пользователи</p>
-            </div>
-            <div class="form-group">
-              <a href="#" class="change-password">Изменить пароль</a>
-            </div>
-            <div class="profile-social">
-              <h4 class="profile-social-title">Социальные сети</h4>
-              <p class="profile-social-desc">Нажмите на иконку социальной сети, чтобы связать ее с вашим аккаунтом</p>
-              <ul class="list-inline profile-social-list">
-                <li><a href="#" class="od active"></a></li>
-                <li><a href="#" class="vk"></a></li>
-                <li><a href="#" class="fb"></a></li>
-                <li><a href="#" class="tw active"></a></li>
-                <li><a href="#" class="mail"></a></li>
-              </ul>
-            </div>
-          </div>
-
-
-
-            <button  class="link-save-form btn-round" type="submit" >Сохранить</button>
+                <div class="form-group">
+                  <label for="email">Электронная почта</label>
+                  <input type="email" class="form-control" id="email" placeholder="mail@mail.com">
+                </div>
+                <div class="form-group form-group-check">
+                    <div class="checkbox">
+                      <input type="checkbox" id="subscribe">check<label for="subscribe"></label>
+                    </div>
+                    <h4 class="checkbox-title">Подписаться на рассылку</h4>
+                </div>
+                <div class="form-group">
+                  <label for="desc-profile">Расскажите о себе</label><i class="max-length">200</i>
+                  <textarea class="form-control" id="desc-profile" maxlength="200" name="descProfile"></textarea>
+                </div>
+              </div>
+              <div class="form-right">
+                <div class="form-group">
+                  <label for="phone">Телефон</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" placeholder="+7 892 357-23-57">
+                </div>
+                <div class="form-group">
+                  <label for="city">Город</label>
+                  <input type="text" class="form-control" id="city" name="city" placeholder="Казань">
+                </div>
+                <div class="form-group form-group-check">
+                    <div class="checkbox">
+                      <input type="checkbox" id="subscribe">check<label for="subscribe"></label>
+                    </div>
+                    <h4 class="checkbox-title">Невидимый профиль</h4>
+                    <p class="checkbox-text">Вашу страничку и действия не увидят другие пользователи</p>
+                </div>
+                <div class="form-group">
+                  <a href="#" class="change-password">Изменить пароль</a>
+                </div>
+                <div class="profile-social">
+                  <h4 class="profile-social-title">Социальные сети</h4>
+                  <p class="profile-social-desc">Нажмите на иконку социальной сети, чтобы связать ее с вашим аккаунтом</p>
+                  <ul class="list-inline profile-social-list">
+                    <li><a href="#" class="od active"></a></li>
+                    <li><a href="#" class="vk"></a></li>
+                    <li><a href="#" class="fb"></a></li>
+                    <li><a href="#" class="tw active"></a></li>
+                    <li><a href="#" class="mail"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div> 
+            <button  class="link-save-form btn-round btn-animated" type="submit" >Сохранить</button>
           </form>
 
 

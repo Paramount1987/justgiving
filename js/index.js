@@ -139,6 +139,21 @@ $(".campany-user-title").hover(function(){
   $(this).css("color","#1a1a1a");
 });
 
+
+/////////////////////////////////visible status
+$(".profile-visible").click(function(e){
+  e.preventDefault();
+  if($(this).hasClass("active")){
+    $(this).removeClass("active");
+    $(this).addClass("inactive");
+    $(this).text("Невидимый");
+  }else{
+    $(this).removeClass("inactive");
+    $(this).addClass("active");
+    $(this).text("Видимый");
+  }
+})
+
 /////////////////////////////////////////get width to replace grid
 
 
