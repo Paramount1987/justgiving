@@ -152,8 +152,14 @@ $(".profile-visible").click(function(e){
     $(this).addClass("active");
     $(this).text("Видимый");
   }
-})
+});
 
+/////////////////////////////////////progress-line
+
+$(".progress-line").each(function(){
+  var widthProgress = $(this).data("percent");
+  $(this).css("width", widthProgress);
+});
 /////////////////////////////////////////get width to replace grid
 
 
