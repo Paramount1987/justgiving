@@ -7,15 +7,15 @@ var addressInput = '<div class="form-address-item form-address-item-added"><div 
 /////////////////////////////video add
 $("#video-plus").click(function(e){
     e.preventDefault();
-    $(".form-video .form-group").append(videoInput);
+    $(".form-video").append(videoInput);
     $(".form-video .video-item").addClass("aviable-close");
 });
 
 $(".form-video").on("click", ".video-item .close",function(){
   $(this).closest(".video-item").remove();
-  if($(".video-item").length < 2){
-    $(".video-item").removeClass("aviable-close");
-  }
+  // if($(".video-item").length < 2){
+  //   $(".video-item").removeClass("aviable-close");
+  // }
   
 });
 ////////////////////////////////////contact add
@@ -125,6 +125,7 @@ var validatorForm =  $("#form-page").validate({
 $("#deadline-page").mask("99.99.9999",{placeholder:"дд/мм/год "});
 $("#date-page").mask("99.99.9999",{placeholder:"дд/мм/год "});
 $("#time-page").mask("99:99",{placeholder:"__:__ "});
+$("#phone-1").mask("+(999) 999 99 99",{placeholder:"+(000) 000 00 00"});
 
 ///////////////.avatar-img-wrap
 var widthImg = $(".avatar-img-wrap").width();

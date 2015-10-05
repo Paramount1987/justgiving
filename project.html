@@ -84,21 +84,46 @@
       </header>
 
       <div class="middle">
+          <div id="modal-goal" class="modal fade"><!--modal-->
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true"></button>
+                  <h4 class="modal-title">Описание</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                  
+                  <p class="modal-footer-desc">
+                  </p>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
         <div class="container-fluid content">
           <div class="project-info-top">
-            <p class="project-name">Для «Подари жизнь»</p>
-            <h1 class="h1-title">Создайте страницу сбора средств</h1>
+            <!-- <p class="project-name">Для «Подари жизнь»</p> -->
+            <h1 class="h1-title">Создайте страницу компании</h1>
             <p>Акция «День добра»</p>
           </div>  
-          <div class="project-image-upload load-img">
-            <label class="file-upload">    
-                <input type="file">
-            </label>
-            <span class="file-upload-sub">Загрузите изображение</span>
-            <img src="i/l-photo.jpg" class="uploaded-img" alt="">
+          <div class="project-image-upload">
+            <div class="img-upload-wrap">
+              <img src="i/avatar.jpg" alt="">
+            </div>
+            <!-- <span class="file-upload-sub">Загрузите изображение</span> -->
+            <!-- <img src="i/l-photo.jpg" class="uploaded-img" alt=""> -->
           </div>
+
+            <div class="form-group">
+              <label class="file-upload" for="image-campany">  
+                Изменить основное изображение   
+                <input type="file" class="input-upload" name="image-campany"> 
+              </label>
+              
+            </div>
           <div class="slider-default">
-            <h4 class="slider-title">Выберите цвет интерфейса</h4>
+            <h4 class="slider-title">Выберите цвет страницы</h4>
             <div class="slider-default-inner">
               <div class="color-carousel">
                 <div class="color" id="orange">color</div>
@@ -118,22 +143,33 @@
           </div>
           <form id="form-page" class="form-default">
             <div class="form-group">
-              <label for="title-page" class="label-strict">Заголовок вашей страницы</label><i class="max-length">160</i>
-              <input type="text" class="form-control form-control-strict" id="title-page" maxlength="160" name="titlePage">
+              <label for="title-page" class="label-strict">Заголовок вашей страницы
+              </label><i class="max-length">160</i>
+              <span class="label-desc">Придумайте название</span>
+              <input type="text" class="form-control form-control-strict" id="title-page" maxlength="160" name="titlePage" value="Безумное чаепитие">
             </div>
             <div class="form-group">
-              <label for="desc-page" class="label-strict">Краткое описание</label><i class="max-length">500</i>
-              <textarea class="form-control form-control-strict"  id="desc-page" maxlength="500" name="descPage"></textarea>
+              <label for="desc-page">Краткое описание</label><i class="max-length">500</i>
+              <span class="label-desc">Опишите свою идею или используйте наш текст</span>
+              <textarea class="form-control"  id="desc-page" maxlength="500" name="descPage">Мы поднимаем £ 9000 , чтобы помочь людям с ограниченными возможностями в Гане, потому что они это заслужили!
+              </textarea>
             </div>
-            <div class="single-line"></div>
+            <div class="form-group">
+              <label for="history-desc">История</label><i class="max-length">500</i>
+              <span class="label-desc">Расскажите подробнее почему для вас это важно</span>
+              <textarea class="form-control"  id="history-desc" maxlength="500" name="historyDesc">Мы поднимаем £ 9000 , чтобы помочь людям с ограниченными возможностями в Гане, потому что они это заслужили!
+              </textarea>
+            </div>
             <div class="form-group">
               <label for="money-page" class="label-strict">Сколько вы хотите собрать?</label>
+              <span class="label-desc">Установите цель сбора</span>
               <div class="input-wrap">
-                <input type="text" class="form-control form-control-strict" id="money-page" name="moneyPage">
+                <input type="text" class="form-control form-control-strict" id="money-page" name="moneyPage" value="100 000">
                 <span class="input-mask-rouble">руб.</span>
               </div>
             </div>
-            <div class="form-group">
+            <a href="#" class="form-group-modal-link" data-toggle="modal" data-target="#modal-goal">Узнайте как правильно поставить цель</a>
+<!--             <div class="form-group">
               <label for="deadline-page" class="label-strict">Дата окончания сбора средств</label>
               <div class="input-wrap">
                 <input type="text" class="form-control form-control-strict" id="deadline-page" name="deadlinePage">
@@ -148,14 +184,13 @@
             <div class="form-group">
               <label for="history-page">Ваша история</label>
               <textarea class="form-control"  id="history-page">Мы поднимаем £ 9000 , чтобы помочь людям с ограниченными возможностями в Гане, потому что они это заслужили!</textarea>
-            </div>
-            <div class="single-line"></div>
+            </div> -->
             <div class="form-group">
               <label for="city-page" class="label-strict">Город</label>
               <input type="text" class="form-control form-control-strict" id="city-page" name="cityPage">
             </div>
             <div class="form-group">
-              <label for="date-page" class="label-strict">Когда</label>
+              <label for="date-page" class="label-strict">Дата</label>
               <div class="input-wrap">
                 <input type="text" class="form-control form-control-strict" id="date-page" name="datePage">
                 <span class="input-mask-calendar icon-calendar"></span>
@@ -167,7 +202,7 @@
             </div>
             <div class="form-group-checkbox">
                 <div class="checkbox">
-                  <input type="checkbox" id="trigger-event">check<label for="trigger-event"></label>
+                  <input type="checkbox" id="trigger-event">check<!-- <label for="trigger-event"></label> -->
                 </div>
                 <h4 class="checkbox-title">Закрытое мероприятие</h4>
                 <p class="checkbox-text">Пользователи не увидят адрес и контакты.</p>
@@ -215,22 +250,33 @@
               </div>  
               <a href="#" id="contact-plus" class="link-plus">Добавить контакт</a>
             </div>
+            <div class="form-group">
+              <label for="max-members">Максимальное количество участников</label>
+              <input type="text" class="form-control" id="max-members"name="maxMembers">
+            </div>
+            <div class="form-group">
+              <label for="min-donate-money">Минимальная сумма пожертвования</label>
+              <div class="input-wrap">
+                <input type="text" class="form-control form-control-strict" id="min-donate-money" name="minMoneyDonate" value="10 000">
+                <span class="input-mask-rouble">руб.</span>
+              </div>
+            </div>
             <div class="form-photo">
-              <h4 class="form-photo-title">Добавьте фотографии</h4>
+              <h4 class="form-photo-title">Добавьте фотографии и видео</h4>
               <ul class="form-photo-list">
                 <li class="load-img">
-                  <label class="file-upload">    
+                  <label class="file-upload file-upload-li">    
                     <input type="file">
                   </label>
                   <img src="i/m-photo.jpg" class="uploaded-img" alt="">
                 </li>
                 <li>
-                  <label class="file-upload">    
+                  <label class="file-upload file-upload-li">    
                       <input type="file">
                   </label>
                 </li>
                 <li>
-                  <label class="file-upload">    
+                  <label class="file-upload file-upload-li">    
                       <input type="file">
                   </label>
                 </li>
@@ -238,13 +284,22 @@
             </div>
             <div class="form-video">
               <h4 class="form-video-title">Ссылка на видео YouTube, Vimeo</h4>
-                <div class="form-group">
+<!--                 <div class="form-group">
                   <div class="video-item"><input type="text" class="form-control" id="url-1" value="http://youtube.com/video"><span class="close">х</span></div>
-                </div>
+                </div> -->
 
                 <a href="#" id="video-plus" class="link-plus">Добавить ссылку</a>
             </div>
-            <div class="submit-wrap"><button  class="link-save-form" type="submit" form="form-page">Сохранить и продолжить</button></div>
+            <div class="form-group">
+              <label for="desc-thank">Текст благодарности</label>
+              <textarea class="form-control"  id="desc-thank" maxlength="500" name="descThank">Мы поднимаем £ 9000 , чтобы помочь людям с ограниченными возможностями в Гане, потому что они это заслужили!
+              </textarea>
+            </div>
+            <div class="form-group form-group-offer">
+                <input type="checkbox" id="offer">
+                <label for="offer" class="checkbox-title offer-title">Оферта</label>
+            </div>
+            <div class="submit-wrap"><button  class="link-save-form" type="submit" form="form-page">Создать страницу</button></div>
           </form>
 
 
