@@ -269,8 +269,6 @@ var top = $(document).scrollTop();
       "-ms-transform":"translate(0," + top/6 +"px)",
       "transform":"translate(0," + top/6 +"px)"
     });
-
-  console.log(top);
 }
 
 
