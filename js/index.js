@@ -62,20 +62,33 @@ $("#trigger-event").change(function(){
 
 //slider
 
-$('.color-carousel').owlCarousel({
+$('.sponsor-carousel').owlCarousel({
+    items:2,
+    loop:true,
     center: true,
+    singleItem:true,
+    margin:20,
+    responsive:{
+        768:{
+          items:4
+        }
+    }
+});
+
+$('.color-carousel').owlCarousel({
     items:5,
     loop:true,
     margin:45,
     responsive:{
         480:{
-            items:7
+            items:6
         },
         768:{
           items:9
         }
     }
 });
+
 
 $('.color-carousel').on("click",".color",function(){
 
@@ -168,12 +181,12 @@ function replaceDonate(){
   var wrap = $(".event-money-wrap");
   var eventInfo = $(".event-info-top");
   if(viewportSize.getWidth() < 768){
-  $(".event-money-wrap").remove();
+  $(".company-content .event-money-wrap").remove();
   $(".event-info-top").remove();
   $(".spot-mobile-money").before(wrap);
   $(".col-left-campaing").prepend(eventInfo);
   }else{
-    $(".event-money-wrap").remove();
+    $(".company-content .event-money-wrap").remove();
     $(".event-info-top").remove();
     $(".event-extra-info").prepend(wrap);
     $(".gradient-bg").prepend(eventInfo);
