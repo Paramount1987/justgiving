@@ -179,17 +179,17 @@ $(".progress-line").each(function(){
 
 function replaceDonate(){
   var wrap = $(".event-money-wrap");
-  var eventInfo = $(".event-info-top");
+  var eventInfo = $(".event-info-top-replace");
   if(viewportSize.getWidth() < 768){
   $(".company-content .event-money-wrap").remove();
-  $(".event-info-top").remove();
+  $(".event-info-top-replace").remove();
   $(".spot-mobile-money").before(wrap);
   $(".col-left-campaing").prepend(eventInfo);
   }else{
     $(".company-content .event-money-wrap").remove();
-    $(".event-info-top").remove();
+    $(".event-info-top-replace").remove();
     $(".event-extra-info").prepend(wrap);
-    $(".gradient-bg").prepend(eventInfo);
+    $(".gradient-bg-replace").prepend(eventInfo);
   }
 }
 
