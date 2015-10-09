@@ -111,6 +111,7 @@ var validatorForm =  $("#form-page").validate({
         cityPage: "required",
         datePage: "required",
         timePage: "required",
+        titlePage: "required",
         titlePage: {
           required: true,
           minlength: 3
