@@ -346,8 +346,8 @@ function mapHeight(){
 mapHeight();
 
 
-$(".form-search").on("click",".btn-search-map",function(){
-
+$(".form-search").on("click",".btn-search-map",function(e){
+  e.preventDefault();
   $(".map-mobile-wrap").slideToggle();
 });
 	////////////////////////////////map
