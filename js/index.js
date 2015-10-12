@@ -194,16 +194,41 @@ function replaceDonate(){
   }
 }
 
+function replaceCampanyTitle(){
+
+  $(".campany-user-self-replace li").each(function(){
+    var gradient = $(this).find(".gradient-bg");
+    var bodyCampany = $(this).find(".campany-user-self-body");
+
+    if(viewportSize.getWidth() < 991){  
+      $(bodyCampany).prepend($(this).find(".campany-wrap-title-author"));
+  }else{
+      $(this).find(".campany-wrap-title-author").appendTo($(gradient));
+  }
+
+  });
+
+};
+
+replaceCampanyTitle();
 replaceDonate();
 
 $(window).resize(function(){
   replaceDonate();
+  replaceCampanyTitle();
+  mapHeight();
   widthImg = $(".avatar-img-wrap").width();
 
   $(".avatar-img-wrap").height(widthImg/1.8);
 });
 
+//////select option
+ $('.selectpicker').selectpicker({
+      style: 'btn-info',
+      size: 4
+  });
 
+/////
 /////////////////////////////////////menu-button
 $(".menu-button").click(function(){
 
@@ -278,25 +303,63 @@ window.onscroll = function(){
 var top = $(document).scrollTop();
 
 
+
   $(".avatar-img-wrap img").css({
       "-webkit-transform":"translate(0," + top/6 +"px)",
       "-ms-transform":"translate(0," + top/6 +"px)",
       "transform":"translate(0," + top/6 +"px)"
     });
+
+  mapSearchScroll(top,topOffset);
 }
 
 
 /////////////////////////////////
+////map search
+var topOffset = $("#map-search").offset();
+
+function mapSearchScroll(top,topOffset){
+  
+
+  if(top > topOffset.top){
+    $("#map-search").css({
+      "-webkit-transform":"translate(0," + (top - topOffset.top) +"px)",
+      "-ms-transform":"translate(0," + (top - topOffset.top) +"px)",
+      "transform":"translate(0," + (top - topOffset.top) +"px)"
+    });
+  }else{
+        $("#map-search").css({
+      "-webkit-transform":"translate(0,0)",
+      "-ms-transform":"translate(0,0)",
+      "transform":"translate(0,0)"
+    });
+  }
+
+}
+
+function mapHeight(){
+  var heightMap = viewportSize.getHeight(); 
+
+  $("#map-search").height(heightMap + "px");
+};
+
+mapHeight();
+
+
+$(".form-search").on("click",".btn-search-map",function(){
+
+  $(".map-mobile-wrap").slideToggle();
+});
 	////////////////////////////////map
           var myMap;
 
           // Дождёмся загрузки API и готовности DOM.
 
           if(!$("#map-1").length == 0){
-             ymaps.ready(init);
+             ymaps.ready(initMap);
            }
 
-          function init () {
+          function initMap () {
               // Создание экземпляра карты и его привязка к контейнеру с
               // заданным id ("map").
                           myMap = new ymaps.Map('map-1', {
@@ -323,6 +386,71 @@ var top = $(document).scrollTop();
 
           }
 
-	////////////////////////
+	////////////////////////map search
+            var mapSearch;
+            var mapMobile;
+
+          // Дождёмся загрузки API и готовности DOM.
+
+          if(!$("#map-search").length == 0){
+             ymaps.ready(initMapSearch);
+           }
+          if(!$("#map-mobile").length == 0){
+             ymaps.ready(initMapMobile);
+           }
+
+          function initMapSearch () {
+              // Создание экземпляра карты и его привязка к контейнеру с
+              // заданным id ("map").
+                          mapSearch = new ymaps.Map('map-search', {
+                              // При инициализации карты обязательно нужно указать
+                              // её центр и коэффициент масштабирования.
+                              center: [55.80239628, 49.21062750], // Москва
+                              zoom: 15,
+                              controls:[]
+                          });
+
+                      var placemarkS = new ymaps.Placemark([55.80239628, 49.21062750],
+                         {
+                        // Свойства.
+                        hintContent: 'ул. Остоженка, 3/14'
+                    },
+                        {
+                        iconImageHref: 'i/icons/mark.png',
+                        iconImageSize: [32, 41],
+                        iconImageOffset: [0, 0]
+                        });
+
+                      mapSearch.behaviors.disable('scrollZoom');
+                      mapSearch.geoObjects.add(placemarkS);
+
+          }
+
+          function initMapMobile () {
+              // Создание экземпляра карты и его привязка к контейнеру с
+              // заданным id ("map").
+                          mapMobile = new ymaps.Map('map-mobile', {
+                              // При инициализации карты обязательно нужно указать
+                              // её центр и коэффициент масштабирования.
+                              center: [55.80239628, 49.21062750], // Москва
+                              zoom: 15,
+                              controls:[]
+                          });
+
+                      var placemarkM = new ymaps.Placemark([55.80239628, 49.21062750],
+                         {
+                        // Свойства.
+                        hintContent: 'ул. Остоженка, 3/14'
+                    },
+                        {
+                        iconImageHref: 'i/icons/mark.png',
+                        iconImageSize: [32, 41],
+                        iconImageOffset: [0, 0]
+                        });
+
+                      mapMobile.behaviors.disable('scrollZoom');
+                      mapMobile.geoObjects.add(placemarkM);
+
+          }
 	
 });
