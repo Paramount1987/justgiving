@@ -245,13 +245,13 @@ $(".menu-button").click(function(){
   }
 
   $(".search-wrap").slideUp();
-  $(".menu-wrap").slideToggle();
+  $(".menu-wrap").stop().slideToggle();
 
 
 });
 
 $(".menu-wrap").on("click",".icon-menu",function(){
-  $(".menu-wrap").slideToggle();
+  $(".menu-wrap").stop().slideToggle();
 
   if(!$(".modal-backdrop-menu").length){
       $(".wrapper").append("<div class='modal-backdrop-menu modal-backdrop fade'></div>");
@@ -277,7 +277,7 @@ $(".search-btn,.search-btn-text").click(function(){
   }
 
   $(".menu-wrap").slideUp();
-  $(".search-wrap").slideToggle();
+  $(".search-wrap").stop().slideToggle();
 
 });
 
@@ -348,7 +348,7 @@ mapHeight();
 
 $(".form-search").on("click",".btn-search-map",function(e){
   e.preventDefault();
-  $(".map-mobile-wrap").slideToggle();
+  $(".map-mobile-wrap").stop().slideToggle();
 });
 	////////////////////////////////map
           var myMap;
