@@ -75,6 +75,25 @@ $('.sponsor-carousel').owlCarousel({
     }
 });
 
+$('.campany-slider').owlCarousel({
+    items:1,
+    singleItem:true,
+    margin:10,
+    responsive:{
+        640:{
+          items:2
+        },
+        768:{
+          items:3,
+          margin:10
+        },
+        1340:{
+          items: 5,
+          margin: 20
+        }
+    }
+});
+
 $('.color-carousel').owlCarousel({
     items:5,
     loop:true,
@@ -310,7 +329,9 @@ var top = $(document).scrollTop();
       "transform":"translate(0," + top/6 +"px)"
     });
 
+if($("#map-search").length)
   mapSearchScroll(top,topOffset);
+
 }
 
 
