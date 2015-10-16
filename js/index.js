@@ -81,15 +81,18 @@ $('.campany-slider').owlCarousel({
     margin:10,
     responsive:{
         640:{
-          items:2
+          items:2,
+          dots: false
         },
         768:{
           items:3,
-          margin:10
+          margin:10,
+          dots: false
         },
         1340:{
           items: 5,
-          margin: 20
+          margin: 20,
+          dots: false
         }
     }
 });
@@ -124,6 +127,7 @@ $('.color-carousel').on("click",".color",function(){
 var validatorForm =  $("#form-page").validate({
       rules: {
         descPage: "required",
+        historyDesc: "required",
         moneyPage: "required",
         deadlinePage: "required",
         urlPage: "required",
@@ -143,6 +147,7 @@ var validatorForm =  $("#form-page").validate({
         urlPage: false,
         cityPage: false,
         datePage: false,
+        historyDesc: false,
         timePage: false,
         streetPage: false,
         housePage: false,
@@ -159,6 +164,12 @@ $("#deadline-page").mask("99.99.9999",{placeholder:"дд/мм/год "});
 $("#date-page").mask("99.99.9999",{placeholder:"дд/мм/год "});
 $("#time-page").mask("99:99",{placeholder:"__:__ "});
 $("#phone-1").mask("+(999) 999 99 99",{placeholder:"+(000) 000 00 00"});
+
+//////////////////////link-close
+$(".link-close").click(function(e){
+  e.preventDefault();
+  $(this).closest(".main-intro").slideToggle();
+});
 
 ///////////////.avatar-img-wrap
 var widthImg = $(".avatar-img-wrap").width();
