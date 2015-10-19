@@ -86,19 +86,298 @@
       </header>
 
       <div class="middle">
-          <div id="modal-goal" class="modal fade"><!--modal-->
+          <div id="modal-support" class="modal fade"><!--modal-->
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true"></button>
-                  <h4 class="modal-title">Описание</h4>
+                  <h4 class="modal-title color-responsive text-center">Я хочу поддержать деньгами</h4>
                 </div>
                 <div class="modal-body">
+                    <form class="form-support">
+                      <div class="form-support-inner">
+                        <div class="left">
+                          <h4 class="modal-body-title">Выберите сумму пожертвования</h4>
+                          <div class="form-radio-group">
+                            <div class="form-group radio-box">
+                                <input type="radio"  name="radio-support" id="25rub" checked>
+                                <label for="25rub" class="radio-title">25 руб.</label>
+                            </div>
+                            <div class="form-group radio-box">
+                                <input type="radio"  name="radio-support" id="100rub">
+                                <label for="100rub" class="radio-title">100 руб.</label>
+                            </div>
+                            <div class="form-group radio-box">
+                                <input type="radio"  name="radio-support" id="300rub">
+                                <label for="300rub" class="radio-title">300 руб.</label>
+                            </div>
+                            <div class="form-group radio-box">
+                                <input type="radio"  name="radio-support" id="700rub">
+                                <label for="700rub" class="radio-title">700 руб.</label>
+                            </div>
+                            <div class="form-group radio-box">
+                                <input type="radio"  name="radio-support" id="1500rub">
+                                <label for="1500rub" class="radio-title">1500 руб.</label>
+                            </div>
+                            <div class="form-group radio-box">
+                                <input type="radio"  name="radio-support" id="5000rub">
+                                <label for="5000rub" class="radio-title">5000 руб.</label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="support-rub" class="label-support">Или введите сумму:</label>
+                            <div class="input-wrap">
+                              <input type="text"  name="support-rub" id="support-rub" class="form-control">
+                              <span class="input-mask-rouble">руб.</span>
+                            </div>  
+                          </div>
+                        </div>
+                        <div class="right">
+                          <button class="btn-default btn-round bg-responsive">Пожертвовать</button>
+                          <p>Пластиковой картой или с телефона</p>
+                          <div class="gray-bg">
+                            <p>
+                              Нажимая «Пожертвовать», я соглашаюсь с <a href="#">условиями оферты</a>, ознакомился и принимаю условия оплаты. Подтверждаю ознакомление с <a href="#">Памяткой</a> и получение информации, предусмотренной ч. 25 ст 7. ФЗ "О национальной платежной системе".
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
                 </div>
-                <div class="modal-footer">
-                  
-                  <p class="modal-footer-desc">
-                  </p>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+          <div id="modal-support-money" class="modal fade"><!--modal-->
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true"></button>
+                  <h4 class="modal-title color-responsive text-center">Жертвую на лечение детей</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="nav-tabs-modal-wrap">
+                    <!-- Nav tabs -->
+                    <ul class="nav-tabs nav-tabs-dobro nav-tabs-modal">
+                      <li class="pull-left"><a href="#card-tab" data-toggle="tab">Банковской картой <span>Комиссия 6.53 руб.</span> </a></li>
+                      <li class="pull-right active"><a href="#mobile-tab" data-toggle="tab">Со счета мобильного <span>Комиссия 0 руб.</span></a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div class="tab-pane fade" id="card-tab">
+                        <form class="form-support-money">
+                          <div class="form-support-inner">
+                              <h4 class="modal-body-title">Введите реквизиты банковской карты</h4>
+                              <div class="form-group">
+                                <span class="label-desc">Номер карты</span>
+                                  <input type="text" class="form-control " id="number-card" name="numberCard" placeholder="0000 0000 0000 0000">
+                              </div>
+                              <div class="form-group">
+                                <span class="label-desc">Владелец карты</span>
+                                  <input type="text" class="form-control " id="own-card" name="ownCard" placeholder="Anton Ivanov">
+                              </div>
+                              <div class="form-group ">
+                                <span class="label-desc">Срок действия карты</span>
+                                <div class="select-card select-month">
+                                  <select class="selectpicker">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                    <option>06</option>
+                                    <option>07</option>
+                                    <option>08</option>
+                                    <option>09</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                  </select>
+                                </div>  
+                                <div class="select-card select-year">
+                                  <select class="selectpicker">
+                                    <option>2016</option>
+                                    <option>2017</option>
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                  </select>
+                                </div>  
+                              </div>
+                              <div class="form-group">
+                                <span class="label-desc">Проверочный код CVV/CVC</span>
+                                  <input type="text" class="form-control " id="cvc-card" name="cvcCard" placeholder="000">
+                              </div>
+                              <div class="form-radio-group">
+                                <div class="form-group radio-box">
+                                    <input type="checkbox"  name="radio-support" id="save-card">
+                                    <label for="save-card" class="radio-title">Запомнить карту</label>
+                                </div>
+                              </div>
+                              <div class="gray-bg">
+                                <p>
+                                  Нажимая кнопку «Пожертвовать», вы присоединяетесь к <a href="#">условиям оферты</a>.
+                                </p>
+                              </div>
+                              <button class="btn-default btn-round bg-responsive">Пожертвовать</button>
+
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade in active" id="mobile-tab">
+                        <ul class="nav-tabs nav-tabs-mobile">
+                          <li class="active"><a href="#bilain-tab" data-toggle="tab"><img src="i/bilain.png" alt=""><span>комиссия 1%</span> </a></li>
+                          <li class=""><a href="#megafon-tab" data-toggle="tab"><img src="i/megafon.png" alt=""><span>комиссия 1,85%</span></a></li>
+                          <li class=""><a href="#tele2-tab" data-toggle="tab"><img src="i/tele2.png" alt=""><span>комиссия 2%</span></a></li>
+                          <li class=""><a href="#mts-tab" data-toggle="tab"><img src="i/mts.png" alt=""><span>комиссия 1,85%</span></a></li>
+                          <li class=""><a href="#yota-tab" data-toggle="tab"><img src="i/yota.png" alt=""><span>комиссия 3%</span></a></li>
+                        </ul>
+                        <div class="tab-content tab-content-mobile">
+                          <div class="tab-pane fade in active" id="bilain-tab">
+                            <p>
+                              На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
+                            </p>
+                            <form class="form-support-money form-support-money-mobile">
+                              <div class="form-support-inner">
+                                  <div class="form-group">
+                                    <label>Введите Ваш номер телефона</label>
+                                      <input type="text" class="form-control" id="number-phone" name="numberPhone" placeholder="+7 --- --- -- --">
+                                  </div>
+                                  <div class="gray-bg">
+                                    <p>
+                                      <span class="color-responsive">Пожертвование</span>  <b>350 руб.</b> <i class="divide">d</i>   Будет списано  <b>354.34 руб.</b>  с учетом комиссии оператора
+                                    </p>
+                                  </div>
+                                  <div class="form-radio-group">
+                                    <div class="form-group radio-box">
+                                        <input type="checkbox"  name="radio-support" id="accept">
+                                        <label for="accept" class="radio-title">
+                                          Я ознакомился и принимаю <a href="#">условия оплаты</a>. Подтверждаю ознакомление с <a href="#">Памяткой</a> и получение информации, предусмотренной ч.25 ст.7 ФЗ «О национальной платежной системе».
+                                        </label>
+                                    </div>
+                                  </div>
+
+                                  <button class="btn-default btn-round bg-responsive">Получить СМС</button>
+                                </div>
+                            </form>
+                          </div>
+                          <div class="tab-pane fade" id="megafon-tab">
+                            <p>
+                              На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
+                            </p>
+                            <form class="form-support-money form-support-money-mobile">
+                              <div class="form-support-inner">
+                                  <div class="form-group">
+                                    <label>Введите Ваш номер телефона</label>
+                                      <input type="text" class="form-control" id="number-phone" name="numberPhone" placeholder="+7 --- --- -- --">
+                                  </div>
+                                  <div class="gray-bg">
+                                    <p>
+                                      <span class="color-responsive">Пожертвование</span>  <b>350 руб.</b> <i class="divide">d</i>   Будет списано  <b>354.34 руб.</b>  с учетом комиссии оператора
+                                    </p>
+                                  </div>
+                                  <div class="form-radio-group">
+                                    <div class="form-group radio-box">
+                                        <input type="checkbox"  name="radio-support" id="accept2">
+                                        <label for="accept2" class="radio-title">
+                                          Я ознакомился и принимаю <a href="#">условия оплаты</a>. Подтверждаю ознакомление с <a href="#">Памяткой</a> и получение информации, предусмотренной ч.25 ст.7 ФЗ «О национальной платежной системе».
+                                        </label>
+                                    </div>
+                                  </div>
+
+                                  <button class="btn-default btn-round bg-responsive">Получить СМС</button>
+                                </div>
+                            </form>
+                          </div>
+                          <div class="tab-pane fade" id="tele2-tab">
+                            <p>
+                              На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
+                            </p>
+                            <form class="form-support-money form-support-money-mobile">
+                              <div class="form-support-inner">
+                                  <div class="form-group">
+                                    <label>Введите Ваш номер телефона</label>
+                                      <input type="text" class="form-control" id="number-phone" name="numberPhone" placeholder="+7 --- --- -- --">
+                                  </div>
+                                  <div class="gray-bg">
+                                    <p>
+                                      <span class="color-responsive">Пожертвование</span>  <b>350 руб.</b> <i class="divide">d</i>   Будет списано  <b>354.34 руб.</b>  с учетом комиссии оператора
+                                    </p>
+                                  </div>
+                                  <div class="form-radio-group">
+                                    <div class="form-group radio-box">
+                                        <input type="checkbox"  name="radio-support" id="accept3">
+                                        <label for="accept3" class="radio-title">
+                                          Я ознакомился и принимаю <a href="#">условия оплаты</a>. Подтверждаю ознакомление с <a href="#">Памяткой</a> и получение информации, предусмотренной ч.25 ст.7 ФЗ «О национальной платежной системе».
+                                        </label>
+                                    </div>
+                                  </div>
+
+                                  <button class="btn-default btn-round bg-responsive">Получить СМС</button>
+                                </div>
+                            </form>
+                          </div>
+                          <div class="tab-pane fade" id="mts-tab">
+                            <p>
+                              На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
+                            </p>
+                            <form class="form-support-money form-support-money-mobile">
+                              <div class="form-support-inner">
+                                  <div class="form-group">
+                                    <label>Введите Ваш номер телефона</label>
+                                      <input type="text" class="form-control" id="number-phone" name="numberPhone" placeholder="+7 --- --- -- --">
+                                  </div>
+                                  <div class="gray-bg">
+                                    <p>
+                                      <span class="color-responsive">Пожертвование</span>  <b>350 руб.</b> <i class="divide">d</i>   Будет списано  <b>354.34 руб.</b>  с учетом комиссии оператора
+                                    </p>
+                                  </div>
+                                  <div class="form-radio-group">
+                                    <div class="form-group radio-box">
+                                        <input type="checkbox"  name="radio-support" id="accept4">
+                                        <label for="accept4" class="radio-title">
+                                          Я ознакомился и принимаю <a href="#">условия оплаты</a>. Подтверждаю ознакомление с <a href="#">Памяткой</a> и получение информации, предусмотренной ч.25 ст.7 ФЗ «О национальной платежной системе».
+                                        </label>
+                                    </div>
+                                  </div>
+
+                                  <button class="btn-default btn-round bg-responsive">Получить СМС</button>
+                                </div>
+                            </form>
+                          </div>
+                          <div class="tab-pane fade" id="yota-tab">
+                            <p>
+                              На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
+                            </p>
+                            <form class="form-support-money form-support-money-mobile">
+                              <div class="form-support-inner">
+                                  <div class="form-group">
+                                    <label>Введите Ваш номер телефона</label>
+                                      <input type="text" class="form-control" id="number-phone" name="numberPhone" placeholder="+7 --- --- -- --">
+                                  </div>
+                                  <div class="gray-bg">
+                                    <p>
+                                      <span class="color-responsive">Пожертвование</span>  <b>350 руб.</b> <i class="divide">d</i>   Будет списано  <b>354.34 руб.</b>  с учетом комиссии оператора
+                                    </p>
+                                  </div>
+                                  <div class="form-radio-group">
+                                    <div class="form-group radio-box">
+                                        <input type="checkbox"  name="radio-support" id="accept5">
+                                        <label for="accept5" class="radio-title">
+                                          Я ознакомился и принимаю <a href="#">условия оплаты</a>. Подтверждаю ознакомление с <a href="#">Памяткой</a> и получение информации, предусмотренной ч.25 ст.7 ФЗ «О национальной платежной системе».
+                                        </label>
+                                    </div>
+                                  </div>
+
+                                  <button class="btn-default btn-round bg-responsive">Получить СМС</button>
+                                </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -138,8 +417,8 @@
               </div>
               <a href="#" class="share-link icon-share bg-responsive"></a>
               <div class="link-btn-wrap">
-                <a href="#" class="btn-default btn-left bg-responsive">Создать кампанию по сбору средств</a>
-                <a href="#" class="btn-stroke btn-right color-responsive">Помочь деньгами</a>
+                <a href="#" class="btn-default btn-left bg-responsive" data-toggle="modal" data-target="#modal-support-money">Создать кампанию по сбору средств</a>
+                <a href="#" class="btn-stroke btn-right color-responsive" data-toggle="modal" data-target="#modal-support">Помочь деньгами</a>
               </div>
             </div> 
             <div class="row row-event-second">

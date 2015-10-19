@@ -164,7 +164,9 @@ $("#deadline-page").mask("99.99.9999",{placeholder:"дд/мм/год "});
 $("#date-page").mask("99.99.9999",{placeholder:"дд/мм/год "});
 $("#time-page").mask("99:99",{placeholder:"__:__ "});
 $("#phone-1").mask("+(999) 999 99 99",{placeholder:"+(000) 000 00 00"});
-
+$("#number-card").mask("9999 9999 9999 9999",{placeholder:"0000 0000 0000 0000"});  
+$("#cvc-card").mask("999",{placeholder:"000"});
+$("#number-phone").mask("+7 999 999 99 99",{placeholder:"+7 --- --- -- --"});
 //////////////////////link-close
 $(".link-close").click(function(e){
   e.preventDefault();
@@ -255,7 +257,7 @@ $(window).resize(function(){
 //////select option
  $('.selectpicker').selectpicker({
       style: 'btn-info',
-      size: 4
+      size: 7
   });
 
 /////
@@ -326,6 +328,18 @@ $(".helps-wrap").on("click",".link-hide",function(e){
   e.preventDefault();
   $(this).closest("li").slideUp();
 });
+///////////////function nav tab mobile
+function mobileScroll(){
+
+    $(".modal-open .modal").animate({ scrollTop: 520 }, 500);
+}
+
+$(".nav-tabs-mobile li").on("click","a",function(){
+
+  if(viewportSize.getWidth() < 768)
+    mobileScroll();
+});
+
 
 ///////////////////////////////////parallax for avatar img
 window.onscroll = function(){
