@@ -247,11 +247,13 @@ function replaceCampanyTitle(){
 
 replaceCampanyTitle();
 replaceDonate();
+replaceBreadcrumbs()
 
 $(window).resize(function(){
   replaceDonate();
   replaceCampanyTitle();
   mapHeight();
+  replaceBreadcrumbs()
   widthImg = $(".avatar-img-wrap").width();
 
   $(".avatar-img-wrap").height(widthImg/1.8);
@@ -331,6 +333,23 @@ $(".helps-wrap").on("click",".link-hide",function(e){
   e.preventDefault();
   $(this).closest("li").slideUp();
 });
+////////////////breadcrumbs header
+$(".breadcrumbs-list").on("click",".active a",function(e){
+
+  if(viewportSize.getWidth() < 768){
+    e.preventDefault();
+    $(".breadcrumbs-list").toggleClass("open");
+    $(".breadcrumbs-list li").not(".active").slideToggle();
+  }
+
+});
+
+function replaceBreadcrumbs(){
+  if(viewportSize.getWidth() < 768)
+    $(".breadcrumbs-list").prepend($(".breadcrumbs-list li.active"));
+}
+
+
 ///////////////function nav tab mobile
 function mobileScroll(){
 
