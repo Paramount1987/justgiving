@@ -75,6 +75,19 @@ $('.sponsor-carousel').owlCarousel({
     }
 });
 
+$('.project-carousel').owlCarousel({
+    items:2,
+    loop:true,
+    center: true,
+    singleItem:true,
+    margin:20,
+    responsive:{
+        768:{
+          items:4
+        }
+    }
+});
+
 $('.campany-slider').owlCarousel({
     items:1,
     singleItem:true,
