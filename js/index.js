@@ -58,6 +58,20 @@ $("#trigger-event").change(function(){
 	})
 	////.swipebox();
 	$( ".swipebox" ).swipebox();
+/////////////////////////////////btn-map
+function ScrollToMap(top){
+ $("html,body").animate({ scrollTop: top }, 500);
+}
+
+$(".btn-map").click(function(e){
+  e.preventDefault();
+  if(viewportSize.getWidth() < 768)
+  {
+    var top = $(".btn-search-map").offset().top;
+    ScrollToMap(top);
+    $(".map-mobile-wrap").slideDown();
+  }
+});
 	/////////////////////////////
 
 //slider
