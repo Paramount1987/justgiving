@@ -185,7 +185,7 @@ var validatorForm =  $("#form-page").validate({
       }
     });
 
-var validatorForm =  $("#form-question").validate({
+var validatorForm2 =  $("#form-question").validate({
       rules: {
         emailQuestion: "required",
         name: "required",
