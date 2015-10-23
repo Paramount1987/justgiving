@@ -185,6 +185,18 @@ var validatorForm =  $("#form-page").validate({
       }
     });
 
+var validatorForm =  $("#form-question").validate({
+      rules: {
+        emailQuestion: "required",
+        name: "required",
+        message: "required"
+      },
+      messages: {
+        emailQuestion: false,
+        name: false,
+        message: false
+      }
+    });
 
 
 $("#deadline-page").mask("99.99.9999",{placeholder:"дд/мм/год "});
