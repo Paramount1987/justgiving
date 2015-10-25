@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no">
-    <title>Регистрация</title>
+    <title>Авторизация</title>
     <link href="style/screen.css" rel="stylesheet" media="all">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -87,7 +87,7 @@
       <div class="middle">
         <div class="container-fluid content">
           <div class="authorization-wrap bg-responsive">
-            <h4 class="author-title">Регистрация</h4>
+            <h4 class="author-title">Авторизуйтесь</h4>
             <p class="author-desc">С помощью аккаунта в соцсетях</p>
             <div class="widget-registr">
             <script src="http://ulogin.ru/js/ulogin.js"></script>
@@ -102,30 +102,19 @@
             <p class="author-desc">или через электронную почту</p>
           </div>  
 
-          <form class="form-default form-registr">
-            <div class="form-group">
-              <label for="name">Имя</label>
-              <input type="text" class="form-control" id="name">
-            </div>
-            <div class="form-group">
-              <label for="surname">Фамилия</label>
-              <input type="text" class="form-control" id="surname">
-            </div>
+          <form class="form-default form-author">
             <div class="form-group">
               <label for="email">Адрес электронной почты</label>
               <input type="email" class="form-control" id="email">
             </div>
             <div class="form-group">
-              <label for="password">Пароль</label>
+              <label for="password">Пароль</label><a href="#" class="link-password color-responsive">Забыли пароль?</a>
               <input type="password" class="form-control" id="password">
             </div>
-            <button  class="link-save-form btn-round bg-responsive" type="submit">Регистрация</button>
+            <button  class="link-save-form btn-round bg-responsive" type="submit">Авторизоваться</button>
             <div class="form-footer-body">
-              <p>
-                Нажав «Зарегистрироваться», вы соглашаетесь с нашими <a href="#">условиями предоставления услуг</a> и <a href="#"></a> политикой конфиденциальности</a>
-              </p>
-              <h4 class="form-footer-title">Уже есть аккаунт?</h4>
-              <a href="#" class="form-footer-link color-responsive">Войти</a>
+              <h4 class="form-footer-title">Впервые на сайте?</h4>
+              <a href="#" class="form-footer-link color-responsive">Зарегистрироваться<br/> через эл.почту</a>
             </div>
           </form>
 

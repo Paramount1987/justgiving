@@ -18,6 +18,12 @@ $(".form-video").on("click", ".video-item .close",function(){
   // }
   
 });
+///////////////change passwrod
+$(".change-password").click(function(e){
+    e.preventDefault();
+     $(this).addClass("active");
+    $(".password-wrap").slideDown();
+});
 ////////////////////////////////////contact add
 $("#contact-plus").click(function(e){
     e.preventDefault();
@@ -195,6 +201,39 @@ var validatorForm2 =  $("#form-question").validate({
         emailQuestion: false,
         name: false,
         message: false
+      }
+    });
+
+var validatorForm3 =  $("#form-bank-money").validate({
+      rules: {
+        donateValue: "required",
+        name: "required",
+        surname: "required",
+        email: "required",
+        ownCard: "required",
+        numberCard: {
+          required: true,
+          minlength: 16
+        },
+        cvcCard: {
+          required: true,
+          minlength: 3
+        }
+      },
+      messages: {
+        donateValue: "Введите сумму пожертвования",
+        name: "Введите Ваше имя",
+        surname: "Введите Вашу фамилию",
+        email: "Введите адрес Вашей электронной почты",
+        ownCard: "Поле заполнено некорректно",
+        numberCard: {
+          required: "Поле заполнено некорректно",
+          minlength: "Поле заполнено некорректно"
+        },
+        cvcCard: {
+          required: "Поле заполнено некорректно",
+          minlength: "Поле заполнено некорректно"
+        }
       }
     });
 

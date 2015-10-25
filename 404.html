@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no">
-    <title>Регистрация</title>
+    <title>Главная</title>
     <link href="style/screen.css" rel="stylesheet" media="all">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -14,7 +14,7 @@
 
   </head>
 
-<body class="author-page blue-color">
+<body id="page-404" class="blue-color">
     <div class="wrapper">
   
       <header>
@@ -25,11 +25,12 @@
               <a href="#" class="link-logo link-logo-h"><img src="i/logo.svg" alt=""></a>
             </div>
             <div class="col-sm-4 col-md-4 hidden-xs">
+              
             </div>
             <div class="col-xs-6 col-sm-4 col-md-4 h-right-block">
               <div class="pull-right header-right-block">
                 <a href="#" class="i-search search-btn"></a><span class="search-btn-text hidden-xs">Поиск</span>
-                <a href="#" class="user-status"><span class="icon-key"></span></a>
+                <a href="registr.html" class="user-status"><span class="icon-key"></span></a>
                 <div class="menu-button">
                   <span></span>
                   <span></span>
@@ -83,58 +84,13 @@
         </div>
 
       </header>
-
-      <div class="middle">
-        <div class="container-fluid content">
-          <div class="authorization-wrap bg-responsive">
-            <h4 class="author-title">Регистрация</h4>
-            <p class="author-desc">С помощью аккаунта в соцсетях</p>
-            <div class="widget-registr">
-            <script src="http://ulogin.ru/js/ulogin.js"></script>
-            <div id="uLogin"  data-ulogin="display=buttons;fields=first_name,last_name;providers=facebook,vkontakte,twitter,odnoklassniki;hidden=other;redirect_uri=http%3A%2F%2Fnewideastudio.ru%2F;mobilebuttons=0">
-                <img src="i/facebook.png"  data-uloginbutton = "facebook" />
-                <img src="i/vkontakte.png" data-uloginbutton = "vkontakte" />
-                <img src="i/twitter.png" data-uloginbutton = "twitter"/>
-                <img src="i/odnokl.png"  data-uloginbutton = "odnoklassniki"  />   
-                <!-- <img src="i/mail.png"  data-uloginbutton = "mailru" /> -->
-            </div>
-            </div>
-            <p class="author-desc">или через электронную почту</p>
-          </div>  
-
-          <form class="form-default form-registr">
-            <div class="form-group">
-              <label for="name">Имя</label>
-              <input type="text" class="form-control" id="name">
-            </div>
-            <div class="form-group">
-              <label for="surname">Фамилия</label>
-              <input type="text" class="form-control" id="surname">
-            </div>
-            <div class="form-group">
-              <label for="email">Адрес электронной почты</label>
-              <input type="email" class="form-control" id="email">
-            </div>
-            <div class="form-group">
-              <label for="password">Пароль</label>
-              <input type="password" class="form-control" id="password">
-            </div>
-            <button  class="link-save-form btn-round bg-responsive" type="submit">Регистрация</button>
-            <div class="form-footer-body">
-              <p>
-                Нажав «Зарегистрироваться», вы соглашаетесь с нашими <a href="#">условиями предоставления услуг</a> и <a href="#"></a> политикой конфиденциальности</a>
-              </p>
-              <h4 class="form-footer-title">Уже есть аккаунт?</h4>
-              <a href="#" class="form-footer-link color-responsive">Войти</a>
-            </div>
-          </form>
-
-
-        </div> <!-- end container -->
-      </div><!-- end middle -->
-
-   
+          <div class="page-not-found">
+            <img src="i/404.png" alt="" class="img-404">
+            <p class="text">Страница временно не доступна</p>
+            <a href="#" class="link-404">Вернуться на главную</a>
+          </div>
     </div><!-- end wrapper -->
+
     <footer id="footer">
       <div class="container-fluid">
         <div class="row">
@@ -166,7 +122,7 @@
         </div>
       </div>
     </footer><!-- end footer -->
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
     <script src="http://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
     <script src="js/build.min.js"></script>
