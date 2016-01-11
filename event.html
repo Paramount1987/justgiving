@@ -15,6 +15,208 @@
   </head>
 
 <body class="orange-color">
+      <div id="modal-support-money" class="modal fade"><!--modal-->
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title color-responsive text-center">Пожертвование в фонд «Подари жизнь»</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="nav-tabs-modal-wrap">
+                      <!-- Nav tabs -->
+                      <ul class="nav-tabs nav-tabs-dobro nav-tabs-modal">
+                        <li class="pull-left active"><a href="#card-tab" data-toggle="tab">Банковской картой</a></li>
+                        <li class="pull-right"><a href="#mobile-tab" data-toggle="tab">Со счета мобильного</a></li>
+                      </ul>
+
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div class="tab-pane fade in active" id="card-tab">
+                          <form id="form-bank-money"  class="form-support-money">
+                            <div class="form-support-inner">
+                                <div class="form-group">
+                                  <label>Сумма пожертвования</label>
+                                    <div class="input-wrap">
+                                      <input type="text" class="form-control color-responsive" id="donate-value" name="donateValue">
+                                      <span class="input-mask-rouble">руб.</span>
+                                    </div>
+                                </div>
+                                <div class="gray-line"></div>
+                                <div class="form-group form-group-name">
+                                  <span class="label-desc">Пожалуйста, представьтесь</span>
+                                    <input type="text" class="form-control " id="name-man"  placeholder="Имя" name="name">
+                                    <input type="text" class="form-control " id="surname-man"  placeholder="Фамилия" name="surname">
+                                </div>
+                                <div class="form-group form-group-email">
+                                  <span class="label-desc">Оставьте электронную почту, чтобы Фонд смог с Вами связаться</span>
+                                    <input type="email" class="form-control " id="email-man" name="email">
+                                </div>
+                                <div class="gray-line"></div>
+                                <h4 class="modal-body-title">Введите реквизиты банковской карты</h4>
+                                <div class="form-group">
+                                  <span class="label-desc">Номер карты</span>
+                                    <input type="text" class="form-control " id="number-card" name="numberCard" placeholder="0000 0000 0000 0000">
+                                </div>
+                                <div class="form-group">
+                                  <span class="label-desc">Владелец карты</span>
+                                    <input type="text" class="form-control " id="own-card" name="ownCard" placeholder="Anton Ivanov">
+                                </div>
+                                <div class="form-group ">
+                                  <span class="label-desc">Срок действия карты</span>
+                                  <div class="select-card select-month">
+                                    <select class="selectpicker">
+                                      <option>01</option>
+                                      <option>02</option>
+                                      <option>03</option>
+                                      <option>04</option>
+                                      <option>05</option>
+                                      <option>06</option>
+                                      <option>07</option>
+                                      <option>08</option>
+                                      <option>09</option>
+                                      <option>10</option>
+                                      <option>11</option>
+                                      <option>12</option>
+                                    </select>
+                                  </div>  
+                                  <div class="select-card select-year">
+                                    <select class="selectpicker">
+                                      <option>2016</option>
+                                      <option>2017</option>
+                                      <option>2018</option>
+                                      <option>2019</option>
+                                      <option>2020</option>
+                                      <option>2021</option>
+                                    </select>
+                                  </div>  
+                                </div>
+                                <div class="form-group">
+                                  <span class="label-desc">Проверочный код CVV/CVC</span>
+                                    <input type="text" class="form-control " id="cvc-card" name="cvcCard" placeholder="000">
+                                </div>
+                                <div class="form-radio-group">
+                                  <div class="form-group radio-box">
+                                      <input type="checkbox"  name="radio-support" id="save-card">
+                                      <label for="save-card" class="radio-title">Запомнить карту</label>
+                                  </div>
+                                </div>
+                                <div class="gray-line"></div>
+                                <button class="btn-default btn-round bg-responsive">Пожертвовать</button>
+                                <div class="gray-bg">
+                                  <p>
+                                    Нажимая «Пожертвовать», я соглашаюсь с <a href="#">условиями оферты</a>, ознакомился и принимаю условия оплаты. Перечисляемая сумма пожертвования не является оплатой товаров/работ/услуг. Благотворительный Фонд «Подари жизнь» не является организатором кампании и не несет ответственность за её проведение.
+                                  </p>
+                                </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="tab-pane fade " id="mobile-tab">
+                          <div class="form-group form-group-title">
+                            <label>Сумма пожертвования</label>
+                              <div class="input-wrap">
+                                <input type="text" class="form-control color-responsive" id="donate-value" name="donateValue" value="500">
+                                <span class="input-mask-rouble">руб.</span>
+                              </div>  
+                              <span class="label-desc">Сумма смс-пожертвования должна <br />быть от 10 руб. до 15 000 руб</span>
+                          </div>
+
+                          <div class="gray-line"></div>
+                          <ul class="nav-tabs nav-tabs-mobile">
+                            <li class="active"><a href="#bilain-tab" data-toggle="tab"><img src="i/bilain.png" alt=""></a></li>
+                            <li class=""><a href="#megafon-tab" data-toggle="tab"><img src="i/megafon.png" alt=""></a></li>
+                            <li class=""><a href="#tele2-tab" data-toggle="tab"><img src="i/tele2.png" alt=""></a></li>
+                            <li class=""><a href="#mts-tab" data-toggle="tab"><img src="i/mts.png" alt=""></a></li>
+                          </ul>
+                          <div class="tab-content tab-content-mobile">
+                            <div class="tab-pane fade in active" id="bilain-tab">
+                              <p>
+                                На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
+                              </p>
+                              <form class="form-support-money form-support-money-mobile">
+                                <div class="form-support-inner">
+                                    <div class="form-group">
+                                      <label>Введите Ваш номер телефона</label>
+                                        <input type="text" class="form-control form-control-phone" id="number-phone" name="numberPhone" placeholder="+7 --- --- -- --">
+                                    </div>
+                                    <button class="btn-default btn-round bg-responsive">Получить СМС</button>
+                                    <div class="gray-bg">
+                                      <p>
+                                        Нажимая «Пожертвовать», я соглашаюсь с <a href="#">условиями оферты</a>, ознакомился и принимаю условия оплаты. Перечисляемая сумма пожертвования не является оплатой товаров/работ/услуг. Благотворительный Фонд «Подари жизнь» не является организатором кампании и не несет ответственность за её проведение.
+                                      </p>
+                                    </div>
+                                  </div>
+                              </form>
+                            </div>
+                            <div class="tab-pane fade" id="megafon-tab">
+                              <p>
+                                На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
+                              </p>
+                              <form class="form-support-money form-support-money-mobile">
+                                <div class="form-support-inner">
+                                    <div class="form-group">
+                                      <label>Введите Ваш номер телефона</label>
+                                        <input type="text" class="form-control form-control-phone" id="number-phone2" name="numberPhone" placeholder="+7 --- --- -- --">
+                                    </div>
+                                    <button class="btn-default btn-round bg-responsive">Получить СМС</button>
+                                    <div class="gray-bg">
+                                      <p>
+                                        Нажимая «Пожертвовать», я соглашаюсь с <a href="#">условиями оферты</a>, ознакомился и принимаю условия оплаты. Перечисляемая сумма пожертвования не является оплатой товаров/работ/услуг. Благотворительный Фонд «Подари жизнь» не является организатором кампании и не несет ответственность за её проведение.
+                                      </p>
+                                    </div>
+                                  </div>
+                              </form>
+                            </div>
+                            <div class="tab-pane fade" id="tele2-tab">
+                              <p>
+                                На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
+                              </p>
+                              <form class="form-support-money form-support-money-mobile">
+                                <div class="form-support-inner">
+                                    <div class="form-group">
+                                      <label>Введите Ваш номер телефона</label>
+                                        <input type="text" class="form-control form-control-phone" id="number-phone3" name="numberPhone" placeholder="+7 --- --- -- --">
+                                    </div>
+
+                                    <button class="btn-default btn-round bg-responsive">Получить СМС</button>
+                                    <div class="gray-bg">
+                                      <p>
+                                        Нажимая «Пожертвовать», я соглашаюсь с <a href="#">условиями оферты</a>, ознакомился и принимаю условия оплаты. Перечисляемая сумма пожертвования не является оплатой товаров/работ/услуг. Благотворительный Фонд «Подари жизнь» не является организатором кампании и не несет ответственность за её проведение.
+                                      </p>
+                                    </div>
+                                  </div>
+                              </form>
+                            </div>
+                            <div class="tab-pane fade" id="mts-tab">
+                              <p>
+                                На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
+                              </p>
+                              <form class="form-support-money form-support-money-mobile">
+                                <div class="form-support-inner">
+                                    <div class="form-group">
+                                      <label>Введите Ваш номер телефона</label>
+                                        <input type="text" class="form-control form-control-phone" id="number-phone4" name="numberPhone" placeholder="+7 --- --- -- --">
+                                    </div>
+
+                                    <button class="btn-default btn-round bg-responsive">Получить СМС</button>
+                                    <div class="gray-bg">
+                                      <p>
+                                        Нажимая «Пожертвовать», я соглашаюсь с <a href="#">условиями оферты</a>, ознакомился и принимаю условия оплаты. Перечисляемая сумма пожертвования не является оплатой товаров/работ/услуг. Благотворительный Фонд «Подари жизнь» не является организатором кампании и не несет ответственность за её проведение.
+                                      </p>
+                                    </div>
+                                  </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->  
+
+
     <div class="wrapper">
   
       <header>
@@ -159,206 +361,7 @@
               </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
           </div><!-- /.modal -->
-          <div id="modal-support-money" class="modal fade"><!--modal-->
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true"></button>
-                  <h4 class="modal-title color-responsive text-center">Пожертвование в фонд «Подари жизнь»</h4>
-                </div>
-                <div class="modal-body">
-                  <div class="nav-tabs-modal-wrap">
-                    <!-- Nav tabs -->
-                    <ul class="nav-tabs nav-tabs-dobro nav-tabs-modal">
-                      <li class="pull-left active"><a href="#card-tab" data-toggle="tab">Банковской картой</a></li>
-                      <li class="pull-right"><a href="#mobile-tab" data-toggle="tab">Со счета мобильного</a></li>
-                    </ul>
 
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                      <div class="tab-pane fade in active" id="card-tab">
-                        <div id="form-bank-money"  class="form-support-money">
-                          <div class="form-support-inner">
-                              <div class="form-group">
-                                <label>Сумма пожертвования</label>
-                                  <div class="input-wrap">
-                                    <input type="text" class="form-control color-responsive" id="donate-value" name="donateValue">
-                                    <span class="input-mask-rouble">руб.</span>
-                                  </div>
-                              </div>
-                              <div class="gray-line"></div>
-                              <div class="form-group form-group-name">
-                                <span class="label-desc">Пожалуйста, представьтесь</span>
-                                  <input type="text" class="form-control " id="name-man"  placeholder="Имя" name="name">
-                                  <input type="text" class="form-control " id="surname-man"  placeholder="Фамилия" name="surname">
-                              </div>
-                              <div class="form-group form-group-email">
-                                <span class="label-desc">Оставьте электронную почту, чтобы Фонд смог с Вами связаться</span>
-                                  <input type="email" class="form-control " id="email-man" name="email">
-                              </div>
-                              <div class="gray-line"></div>
-                              <h4 class="modal-body-title">Введите реквизиты банковской карты</h4>
-                              <div class="form-group">
-                                <span class="label-desc">Номер карты</span>
-                                  <input type="text" class="form-control " id="number-card" name="numberCard" placeholder="0000 0000 0000 0000">
-                              </div>
-                              <div class="form-group">
-                                <span class="label-desc">Владелец карты</span>
-                                  <input type="text" class="form-control " id="own-card" name="ownCard" placeholder="Anton Ivanov">
-                              </div>
-                              <div class="form-group ">
-                                <span class="label-desc">Срок действия карты</span>
-                                <div class="select-card select-month">
-                                  <select class="selectpicker">
-                                    <option>01</option>
-                                    <option>02</option>
-                                    <option>03</option>
-                                    <option>04</option>
-                                    <option>05</option>
-                                    <option>06</option>
-                                    <option>07</option>
-                                    <option>08</option>
-                                    <option>09</option>
-                                    <option>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
-                                  </select>
-                                </div>  
-                                <div class="select-card select-year">
-                                  <select class="selectpicker">
-                                    <option>2016</option>
-                                    <option>2017</option>
-                                    <option>2018</option>
-                                    <option>2019</option>
-                                    <option>2020</option>
-                                    <option>2021</option>
-                                  </select>
-                                </div>  
-                              </div>
-                              <div class="form-group">
-                                <span class="label-desc">Проверочный код CVV/CVC</span>
-                                  <input type="text" class="form-control " id="cvc-card" name="cvcCard" placeholder="000">
-                              </div>
-                              <div class="form-radio-group">
-                                <div class="form-group radio-box">
-                                    <input type="checkbox"  name="radio-support" id="save-card">
-                                    <label for="save-card" class="radio-title">Запомнить карту</label>
-                                </div>
-                              </div>
-                              <div class="gray-line"></div>
-                             <!--  <button class="btn-default btn-round bg-responsive">Пожертвовать</button> -->
-                              <div class="gray-bg">
-                                <p>
-                                  Нажимая «Пожертвовать», я соглашаюсь с <a href="#">условиями оферты</a>, ознакомился и принимаю условия оплаты. Перечисляемая сумма пожертвования не является оплатой товаров/работ/услуг. Благотворительный Фонд «Подари жизнь» не является организатором кампании и не несет ответственность за её проведение.
-                                </p>
-                              </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tab-pane fade " id="mobile-tab">
-                        <div class="form-group form-group-title">
-                          <label>Сумма пожертвования</label>
-                            <div class="input-wrap">
-                              <input type="text" class="form-control color-responsive" id="donate-value" name="donateValue" value="500">
-                              <span class="input-mask-rouble">руб.</span>
-                            </div>  
-                            <span class="label-desc">Сумма смс-пожертвования должна <br />быть от 10 руб. до 15 000 руб</span>
-                        </div>
-
-                        <div class="gray-line"></div>
-                        <ul class="nav-tabs nav-tabs-mobile">
-                          <li class="active"><a href="#bilain-tab" data-toggle="tab"><img src="i/bilain.png" alt=""></a></li>
-                          <li class=""><a href="#megafon-tab" data-toggle="tab"><img src="i/megafon.png" alt=""></a></li>
-                          <li class=""><a href="#tele2-tab" data-toggle="tab"><img src="i/tele2.png" alt=""></a></li>
-                          <li class=""><a href="#mts-tab" data-toggle="tab"><img src="i/mts.png" alt=""></a></li>
-                        </ul>
-                        <div class="tab-content tab-content-mobile">
-                          <div class="tab-pane fade in active" id="bilain-tab">
-                            <p>
-                              На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
-                            </p>
-                            <form class="form-support-money form-support-money-mobile">
-                              <div class="form-support-inner">
-                                  <div class="form-group">
-                                    <label>Введите Ваш номер телефона</label>
-                                      <input type="text" class="form-control form-control-phone" id="number-phone" name="numberPhone" placeholder="+7 --- --- -- --">
-                                  </div>
-                                  <button class="btn-default btn-round bg-responsive">Получить СМС</button>
-                                  <div class="gray-bg">
-                                    <p>
-                                      Нажимая «Пожертвовать», я соглашаюсь с <a href="#">условиями оферты</a>, ознакомился и принимаю условия оплаты. Перечисляемая сумма пожертвования не является оплатой товаров/работ/услуг. Благотворительный Фонд «Подари жизнь» не является организатором кампании и не несет ответственность за её проведение.
-                                    </p>
-                                  </div>
-                                </div>
-                            </form>
-                          </div>
-                          <div class="tab-pane fade" id="megafon-tab">
-                            <p>
-                              На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
-                            </p>
-                            <form class="form-support-money form-support-money-mobile">
-                              <div class="form-support-inner">
-                                  <div class="form-group">
-                                    <label>Введите Ваш номер телефона</label>
-                                      <input type="text" class="form-control form-control-phone" id="number-phone2" name="numberPhone" placeholder="+7 --- --- -- --">
-                                  </div>
-                                  <button class="btn-default btn-round bg-responsive">Получить СМС</button>
-                                  <div class="gray-bg">
-                                    <p>
-                                      Нажимая «Пожертвовать», я соглашаюсь с <a href="#">условиями оферты</a>, ознакомился и принимаю условия оплаты. Перечисляемая сумма пожертвования не является оплатой товаров/работ/услуг. Благотворительный Фонд «Подари жизнь» не является организатором кампании и не несет ответственность за её проведение.
-                                    </p>
-                                  </div>
-                                </div>
-                            </form>
-                          </div>
-                          <div class="tab-pane fade" id="tele2-tab">
-                            <p>
-                              На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
-                            </p>
-                            <form class="form-support-money form-support-money-mobile">
-                              <div class="form-support-inner">
-                                  <div class="form-group">
-                                    <label>Введите Ваш номер телефона</label>
-                                      <input type="text" class="form-control form-control-phone" id="number-phone3" name="numberPhone" placeholder="+7 --- --- -- --">
-                                  </div>
-
-                                  <button class="btn-default btn-round bg-responsive">Получить СМС</button>
-                                  <div class="gray-bg">
-                                    <p>
-                                      Нажимая «Пожертвовать», я соглашаюсь с <a href="#">условиями оферты</a>, ознакомился и принимаю условия оплаты. Перечисляемая сумма пожертвования не является оплатой товаров/работ/услуг. Благотворительный Фонд «Подари жизнь» не является организатором кампании и не несет ответственность за её проведение.
-                                    </p>
-                                  </div>
-                                </div>
-                            </form>
-                          </div>
-                          <div class="tab-pane fade" id="mts-tab">
-                            <p>
-                              На указанный номер телефона придет SMS с цифрой, которую нужно отправить в ответном SMS для подтверждения платежа. Договор с оператором должен быть оформлен на физическое лицо и после оплаты на счету должно оставаться не менее 30 рублей. 
-                            </p>
-                            <form class="form-support-money form-support-money-mobile">
-                              <div class="form-support-inner">
-                                  <div class="form-group">
-                                    <label>Введите Ваш номер телефона</label>
-                                      <input type="text" class="form-control form-control-phone" id="number-phone4" name="numberPhone" placeholder="+7 --- --- -- --">
-                                  </div>
-
-                                  <button class="btn-default btn-round bg-responsive">Получить СМС</button>
-                                  <div class="gray-bg">
-                                    <p>
-                                      Нажимая «Пожертвовать», я соглашаюсь с <a href="#">условиями оферты</a>, ознакомился и принимаю условия оплаты. Перечисляемая сумма пожертвования не является оплатой товаров/работ/услуг. Благотворительный Фонд «Подари жизнь» не является организатором кампании и не несет ответственность за её проведение.
-                                    </p>
-                                  </div>
-                                </div>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-          </div><!-- /.modal -->
           <div id="modal-error" class="modal fade"><!--modal-->
             <div class="modal-dialog">
               <div class="modal-content">
