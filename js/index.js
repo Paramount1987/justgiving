@@ -1,5 +1,38 @@
 $(document).ready(function(){
 
+//ios modal fix
+// iOS check...ugly but necessary
+if( navigator.userAgent.match(/iPhone|iPad|iPod/i) ) {
+    $('.modal').on('show.bs.modal', function() {
+        // Position modal absolute and bump it down to the scrollPosition
+        $(this)
+            .css({
+                position: 'absolute',
+                marginTop: $(window).scrollTop() + 'px',
+                bottom: 'auto'
+            });
+        // Position backdrop absolute and make it span the entire page
+        //
+        // Also dirty, but we need to tap into the backdrop after Boostrap 
+        // positions it but before transitions finish.
+        //
+        setTimeout( function() {
+            $('.modal-backdrop').css({
+                position: 'absolute', 
+                top: 0, 
+                left: 0,
+                width: '100%',
+                height: Math.max(
+                    document.body.scrollHeight, document.documentElement.scrollHeight,
+                    document.body.offsetHeight, document.documentElement.offsetHeight,
+                    document.body.clientHeight, document.documentElement.clientHeight
+                ) + 'px'
+            });
+        }, 0);
+    });
+}
+//
+
 var videoInput = '<div class="video-item"><input type="text" class="form-control"><span class="close">х</span></div>';
 var contactInput = '<div class="form-contact-item form-contact-item-added"><div class="close">удалить контакт</div><div class="form-group"><label>Телефон</label><input type="tel" class="form-control"></div><div class="form-group"><label>Электронная почта</label><input type="email" class="form-control"></div></div>'
 var addressInput = '<div class="form-address-item form-address-item-added"><div class="close">удалить адрес</div><div class="form-group"><label class="label-strict">Улица</label><input type="text" class="form-control form-control-strict" name="streetPage" required></div><div class="form-group-wrap"><div class="form-group form-group-inline pull-left"><label class="label-strict">Дом</label><input type="text" class="form-control form-control-strict" name="housePage" required></div><div class="form-group form-group-inline pull-right"><label>Квартира</label><input type="text" class="form-control"></div></div><div class="form-group"><label>Хотите что-то добавить?</label><input type="text" class="form-control"></div></div>';
