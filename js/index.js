@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+//ios modal touch
+$(document).on('touchmove','input',function(e){
+      e.preventDefault();
+});
+//
 
 var videoInput = '<div class="video-item"><input type="text" class="form-control"><span class="close">х</span></div>';
 var contactInput = '<div class="form-contact-item form-contact-item-added"><div class="close">удалить контакт</div><div class="form-group"><label>Телефон</label><input type="tel" class="form-control"></div><div class="form-group"><label>Электронная почта</label><input type="email" class="form-control"></div></div>'
